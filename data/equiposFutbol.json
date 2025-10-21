@@ -1,0 +1,49 @@
+{
+"equiposFutbol":[
+{
+    "id": ,
+    "nombre": "",
+    "pais": "",
+    "liga": "",
+    "fundacion": ,
+    "cantiadDeTitulosNacionales": ,
+    "cantidadDeTitulosnternacionales": ,
+    "capacidadEstadio": ,
+    "coloresCamiseta": {
+        "color1": "",
+        "color2": "",
+        "color3": ""
+    }
+},
+{
+    "id": ,
+    "nombre": "",
+    "pais": "",
+    "liga": "",
+    "fundacion": ,
+    "cantiadDeTitulosNacionales": ,
+    "cantidadDeTitulosInternacionales": ,
+    "capacidadEstadio": ,
+    "coloresCamiseta": {
+        "color1": "",
+        "color2": "",
+        "color3": ""
+    }
+},
+{
+    "id": ,
+    "nombre": "",
+    "pais": "",
+    "liga": "",
+    "fundacion": ,
+    "cantiadDeTitulosNacionales": ,
+    "cantidadDeTitulosInternacionales": ,
+    "capacidadEstadio": ,
+    "coloresCamiseta": {
+        "color1": "",
+        "color2": "",
+        "color3": ""
+    }
+}
+]
+}
