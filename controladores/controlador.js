@@ -22,9 +22,18 @@ function mostrarTitulosInter(req, res) {
     res.status(200).json(datos)
 }
 
+//Funcion para mostrar capacidad del estadio.
+function mostrarCapacidadEstadio(req, res) {
+    const capacidad = req.params.capacidad
+    const datos = importModelo.capEstadio(capacidad);
+    res.status(200).json(datos)
+}
+
+
 //Export de funciones.
 module.exports = {
     mostrarDatos,
     mostrarTitulos,
-    mostrarTitulosInter
+    mostrarTitulosInter,
+    mostrarCapacidadEstadio
 }

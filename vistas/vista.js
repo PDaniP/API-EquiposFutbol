@@ -16,6 +16,8 @@ router.get('/nacionales/:nacionales', datosDesdeControlador.mostrarTitulos)
 //ruta para mostrar titulos internacionales.
 router.get('/internacionales/:internacionales', datosDesdeControlador.mostrarTitulosInter)
 
+//ruta para mostrar capacidad del estadio.
+router.get('/capacidad/:capacidad', datosDesdeControlador.mostrarCapacidadEstadio)
 
 //Exportacion de router.
 module.exports = router

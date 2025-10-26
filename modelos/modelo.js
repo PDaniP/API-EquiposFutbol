@@ -1,4 +1,4 @@
-//El modelo busca informacion en la base de datos y las envia al conrtrolador.
+//El modelo busca informacion en la base de datos y las envia al controlador.
 
 //variable para importar los datos del json
 const datos = require("../data/equiposFutbol.json");
@@ -10,15 +10,17 @@ const mostrarTodosLosDatos = () =>{
     return datos;
 }
 
-console.log(datos[0].cantiadDeTitulosNacionales)
+//console.log(datos[0].cantiadDeTitulosNacionales)
 
 //muestra la los equipos con mas de x titulos nacionales
 const titulosNacionales = (titulos) =>{
     const titNaci = []
     datos.filter((equipo) => {
         if (equipo.cantidadDeTitulosNacionales > titulos)
-            titNaci.push({nombre:equipo.nombre,
-        cantidad:equipo.cantidadDeTitulosNacionales})
+            titNaci.push({
+                        nombre:equipo.nombre,
+                        cantidad:equipo.cantidadDeTitulosNacionales
+                    })
     })
     return titNaci;
 }
@@ -28,12 +30,26 @@ const titulosInternacionales = (titulos) =>{
     const titInter = []
     datos.filter((equipo) => {
         if (equipo.cantidadDeTitulosInternacionales > titulos)
-            titInter.push({nombre:equipo.nombre,
-        cantidad:equipo.cantidadDeTitulosInternacionales})
+            titInter.push({
+                            nombre:equipo.nombre,
+                            cantidad:equipo.cantidadDeTitulosInternacionales
+                        })
     })
     return titInter;
 }
 
+//filtra los equipos en base a la capacidad del estadio.
+const capEstadio = (capacidad) =>{
+    const capEst = []
+    datos.filter((equipo) => {
+        if (equipo.capacidadEstadio > capacidad)
+            capEst.push({
+                        nombre:equipo.nombre,
+                        capacidad:equipo.capacidadEstadio
+                        })
+    })
+    return capEst;
+}
 
 
 //Para exportar 
