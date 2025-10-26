@@ -1,6 +1,7 @@
 //Pido datos al modelo y los envio a vista
 
 const importModelo = require("../modelos/modelo")
+const importVista = require("../vistas/vista")
 
 //Funcion para mostrar todos los datos.
 function mostrarDatos(req, res) {
