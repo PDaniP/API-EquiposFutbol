@@ -1,49 +1,32 @@
+[
 {
-"equiposFutbol":[
-{
-    "id": ,
-    "nombre": "",
-    "pais": "",
-    "liga": "",
-    "fundacion": ,
-    "cantiadDeTitulosNacionales": ,
-    "cantidadDeTitulosnternacionales": ,
-    "capacidadEstadio": ,
+    "id": 1,
+    "nombre": "Boca",
+    "pais": "Argentina",
+    "liga": "Liga de primera division",
+    "fundacion": 1905,
+    "cantiadDeTitulosNacionales": 75,
+    "cantidadDeTitulosnternacionales": 25,
+    "capacidadEstadio": 55000,
     "coloresCamiseta": {
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color1": "azul",
+        "color2": "amarillo"
     }
 },
 {
-    "id": ,
-    "nombre": "",
-    "pais": "",
-    "liga": "",
-    "fundacion": ,
-    "cantiadDeTitulosNacionales": ,
-    "cantidadDeTitulosInternacionales": ,
-    "capacidadEstadio": ,
+    "id": 2,
+    "nombre": "Boca",
+    "pais": "Argentina",
+    "liga": "Liga de primera division",
+    "fundacion": 1905,
+    "cantiadDeTitulosNacionales": 75,
+    "cantidadDeTitulosnternacionales": 25,
+    "capacidadEstadio": 55000,
     "coloresCamiseta": {
-        "color1": "",
-        "color2": "",
-        "color3": ""
-    }
-},
-{
-    "id": ,
-    "nombre": "",
-    "pais": "",
-    "liga": "",
-    "fundacion": ,
-    "cantiadDeTitulosNacionales": ,
-    "cantidadDeTitulosInternacionales": ,
-    "capacidadEstadio": ,
-    "coloresCamiseta": {
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color1": "azul",
+        "color2": "amarillo"
     }
 }
 ]
-}
+
+
