@@ -16,15 +16,30 @@ console.log(datos[0].cantiadDeTitulosNacionales)
 const titulosNacionales = (titulos) =>{
     const titNaci = []
     datos.filter((equipo) => {
-        if (equipo.cantiadDeTitulosNacionales > titulos)
+        if (equipo.cantidadDeTitulosNacionales > titulos)
             titNaci.push({nombre:equipo.nombre,
-        cantidad:equipo.cantiadDeTitulosNacionales})
+        cantidad:equipo.cantidadDeTitulosNacionales})
     })
     return titNaci;
 }
 
+//muestra la los equipos con mas de x titulos internacionales
+const titulosInternacionales = (titulos) =>{
+    const titInter = []
+    datos.filter((equipo) => {
+        if (equipo.cantidadDeTitulosInternacionales > titulos)
+            titInter.push({nombre:equipo.nombre,
+        cantidad:equipo.cantidadDeTitulosInternacionales})
+    })
+    return titInter;
+}
+
+
+
 //Para exportar 
 module.exports = {
     mostrarTodosLosDatos,
-    titulosNacionales
+    titulosNacionales,
+    titulosInternacionales,
+    capEstadio
 }

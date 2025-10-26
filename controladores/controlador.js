@@ -15,7 +15,16 @@ function mostrarTitulos(req, res) {
     res.status(200).json(datos)
 }
 
+//Funcion para mostrar titulos internacionales
+function mostrarTitulosInter(req, res) {
+    const titulo = req.params.internacionales
+    const datos = importModelo.titulosInternacionales(titulo);
+    res.status(200).json(datos)
+}
+
+//Export de funciones.
 module.exports = {
     mostrarDatos,
-    mostrarTitulos
+    mostrarTitulos,
+    mostrarTitulosInter
 }
