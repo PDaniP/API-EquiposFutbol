@@ -10,6 +10,7 @@ const router = express.Router();
 //ruta para mostrar todos los datos
 router.get('/lista', datosDesdeControlador.mostrarDatos);
 
+router.get('/nacionales/:nacionales', datosDesdeControlador.mostrarTitulos)
 
 
 

@@ -10,9 +10,21 @@ const mostrarTodosLosDatos = () =>{
     return datos;
 }
 
+console.log(datos[0].cantiadDeTitulosNacionales)
 
+//muestra la los equipos con mas de x titulos nacionales
+const titulosNacionales = (titulos) =>{
+    const titNaci = []
+    datos.filter((equipo) => {
+        if (equipo.cantiadDeTitulosNacionales > titulos)
+            titNaci.push({nombre:equipo.nombre,
+        cantidad:equipo.cantiadDeTitulosNacionales})
+    })
+    return titNaci;
+}
 
 //Para exportar 
 module.exports = {
-    mostrarTodosLosDatos
+    mostrarTodosLosDatos,
+    titulosNacionales
 }

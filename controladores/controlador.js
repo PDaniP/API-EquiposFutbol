@@ -8,8 +8,14 @@ function mostrarDatos(req, res) {
     res.status(200).json(datos)
 }
 
-
+//Funcion para mostrar titulos nacionales.
+function mostrarTitulos(req, res) {
+    const titulo = req.params.nacionales
+    const datos = importModelo.titulosNacionales(titulo);
+    res.status(200).json(datos)
+}
 
 module.exports = {
-    mostrarDatos
+    mostrarDatos,
+    mostrarTitulos
 }
