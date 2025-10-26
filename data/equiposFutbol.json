@@ -1,32 +1,426 @@
 [
-{
-    "id": 1,
-    "nombre": "Boca",
+  {
+    "id" : 1,
+    "nombre": "Boca Juniors",
     "pais": "Argentina",
-    "liga": "Liga de primera division",
+    "liga": "Liga Profesional de Fútbol",
     "fundacion": 1905,
     "cantiadDeTitulosNacionales": 75,
     "cantidadDeTitulosnternacionales": 25,
-    "capacidadEstadio": 55000,
+    "capacidadEstadio": 54000,
     "coloresCamiseta": {
-        "color1": "azul",
-        "color2": "amarillo"
+      "color1": "azul",
+      "color2": "amarillo",
+      "color3": "blanco"
     }
-},
-{
-    "id": 2,
-    "nombre": "Boca",
+  },
+  {
+    "id" : 2,
+    "nombre": "River Plate",
     "pais": "Argentina",
-    "liga": "Liga de primera division",
-    "fundacion": 1905,
-    "cantiadDeTitulosNacionales": 10,
-    "cantidadDeTitulosnternacionales": 25,
-    "capacidadEstadio": 55000,
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1901,
+    "cantiadDeTitulosNacionales": 70,
+    "cantidadDeTitulosnternacionales": 22,
+    "capacidadEstadio": 83500,
     "coloresCamiseta": {
-        "color1": "azul",
-        "color2": "amarillo"
+      "color1": "blanco",
+      "color2": "rojo",
+      "color3": "negro"
     }
-}
+  },
+  {
+    "id" : 3,
+    "nombre": "Racing Club",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1903,
+    "cantiadDeTitulosNacionales": 32,
+    "cantidadDeTitulosnternacionales": 7,
+    "capacidadEstadio": 51000,
+    "coloresCamiseta": {
+      "color1": "celeste",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id" : 4,
+    "nombre": "Independiente",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1905,
+    "cantiadDeTitulosNacionales": 35,
+    "cantidadDeTitulosnternacionales": 18,
+    "capacidadEstadio": 48000,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id" : 5,
+    "nombre": "San Lorenzo",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1908,
+    "cantiadDeTitulosNacionales": 17,
+    "cantidadDeTitulosnternacionales": 4,
+    "capacidadEstadio": 47000,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "rojo"
+    }
+  },
+  {
+    "id" : 6,
+    "nombre": "Estudiantes de La Plata",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1905,
+    "cantiadDeTitulosNacionales": 15,
+    "cantidadDeTitulosnternacionales": 6,
+    "capacidadEstadio": 30000,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id" : 7,
+    "nombre": "Newell's Old Boys",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1903,
+    "cantiadDeTitulosNacionales": 9,
+    "cantidadDeTitulosnternacionales": 0,
+    "capacidadEstadio": 42000,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "negro"
+    }
+  },
+  {
+    "id" : 8,
+    "nombre": "Rosario Central",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1889,
+    "cantiadDeTitulosNacionales": 8,
+    "cantidadDeTitulosnternacionales": 1,
+    "capacidadEstadio": 41000,
+    "coloresCamiseta": {
+      "color1": "amarillo",
+      "color2": "azul"
+    }
+  },
+  {
+    "id" : 9,
+    "nombre": "Banfield",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1896,
+    "cantiadDeTitulosNacionales": 6,
+    "cantidadDeTitulosnternacionales": 0,
+    "capacidadEstadio": 36000,
+    "coloresCamiseta": {
+      "color1": "verde",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id" : 10,
+    "nombre": "Lanús",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1915,
+    "cantiadDeTitulosNacionales": 7,
+    "cantidadDeTitulosnternacionales": 2,
+    "capacidadEstadio": 47000,
+    "coloresCamiseta": {
+      "color1": "granate",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id" : 11,
+    "nombre": "Argentinos Juniors",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1904,
+    "cantiadDeTitulosNacionales": 5,
+    "cantidadDeTitulosnternacionales": 1,
+    "capacidadEstadio": 26000,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id" : 12,
+    "nombre": "Vélez Sarsfield",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1910,
+    "cantiadDeTitulosNacionales": 10,
+    "cantidadDeTitulosnternacionales": 1,
+    "capacidadEstadio": 49000,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "azul"
+    }
+  },
+  {
+    "id" : 13,
+    "nombre": "San Martín",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1921,
+    "cantiadDeTitulosNacionales": 2,
+    "cantidadDeTitulosnternacionales": 0,
+    "capacidadEstadio": 32000,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "celeste"
+    }
+  },
+  {
+    "id" : 14,
+    "nombre": "Gimnasia y esgrima La Plata",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1914,
+    "cantiadDeTitulosNacionales": 0,
+    "cantidadDeTitulosnternacionales": 0,
+    "capacidadEstadio": 23000,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "negro"
+    }
+  },
+  {
+    "id" : 15,
+    "nombre": "Unión de Santa Fe",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1907,
+    "cantiadDeTitulosNacionales": 2,
+    "cantidadDeTitulosnternacionales": 0,
+    "capacidadEstadio": 27000,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id" : 16,
+    "nombre": "Huracán",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1957,
+    "cantiadDeTitulosNacionales": 3,
+    "cantidadDeTitulosnternacionales": 1,
+    "capacidadEstadio": 17000,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "amarillo",
+      "color3": "blanco"
+    }
+  },
+  {
+    "id" : 17,
+    "nombre": "Central Córdoba (Santiago del Estero)",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1919,
+    "cantiadDeTitulosNacionales": 0,
+    "cantidadDeTitulosnternacionales": 0,
+    "capacidadEstadio": 23000,
+    "coloresCamiseta": {
+      "color1": "verde",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id" : 18,
+    "nombre": "Atlético Tucumán",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1902,
+    "cantiadDeTitulosNacionales": 0,
+    "cantidadDeTitulosnternacionales": 0,
+    "capacidadEstadio": 30000,
+    "coloresCamiseta": {
+      "color1": "celeste",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id" : 19,
+    "nombre": "Platense",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1905,
+    "cantiadDeTitulosNacionales": 1,
+    "cantidadDeTitulosnternacionales": 0,
+    "capacidadEstadio": 25000,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "marrón"
+    }
+  },
+  {
+    "id" : 20,
+    "nombre": "Sarmiento de Junín",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1911,
+    "cantiadDeTitulosNacionales": 0,
+    "cantidadDeTitulosnternacionales": 0,
+    "capacidadEstadio": 20000,
+    "coloresCamiseta": {
+      "color1": "verde",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id" : 21,
+    "nombre": "Tigre",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1902,
+    "cantiadDeTitulosNacionales": 1,
+    "cantidadDeTitulosnternacionales": 1,
+    "capacidadEstadio": 27000,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "amarillo"
+    }
+  },
+  {
+    "id" : 22,
+    "nombre": "Talleres de Cordoba",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1910,
+    "cantiadDeTitulosNacionales": 0,
+    "cantidadDeTitulosnternacionales": 0,
+    "capacidadEstadio": 15000,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id" : 23,
+    "nombre": "Godoy Cruz",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1921,
+    "cantiadDeTitulosNacionales": 2,
+    "cantidadDeTitulosnternacionales": 0,
+    "capacidadEstadio": 32000,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "celeste"
+    }
+  },
+  {
+    "id" : 24,
+    "nombre": "Barracas Central",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1904,
+    "cantiadDeTitulosNacionales": 0,
+    "cantidadDeTitulosnternacionales": 0,
+    "capacidadEstadio": 17000,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id" : 25,
+    "nombre": "Instituto",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1918,
+    "cantiadDeTitulosNacionales": 0,
+    "cantidadDeTitulosnternacionales": 0,
+    "capacidadEstadio": 28000,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "rojo"
+    }
+  },
+  {
+    "id" : 26,
+    "nombre": "Belgrano",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1905,
+    "cantiadDeTitulosNacionales": 0,
+    "cantidadDeTitulosnternacionales": 0,
+    "capacidadEstadio": 35000,
+    "coloresCamiseta": {
+      "color1": "celeste",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id" : 27,
+    "nombre": "Defensa y Justicia",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1935,
+    "cantiadDeTitulosNacionales": 1,
+    "cantidadDeTitulosnternacionales": 1,
+    "capacidadEstadio": 25000,
+    "coloresCamiseta": {
+      "color1": "verde",
+      "color2": "amarillo"
+    }
+  },
+  {
+    "id" : 28,
+    "nombre": "Independiente Rivadavia",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1935,
+    "cantiadDeTitulosNacionales": 1,
+    "cantidadDeTitulosnternacionales": 1,
+    "capacidadEstadio": 25000,
+    "coloresCamiseta": {
+      "color1": "verde",
+      "color2": "amarillo"
+    }
+  },
+  {
+    "id" : 29,
+    "nombre": "Aldosivi",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1935,
+    "cantiadDeTitulosNacionales": 1,
+    "cantidadDeTitulosnternacionales": 1,
+    "capacidadEstadio": 25000,
+    "coloresCamiseta": {
+      "color1": "verde",
+      "color2": "amarillo"
+    }
+  },
+  {
+    "id" : 30,
+    "nombre": "Deportivo Riestra",
+    "pais": "Argentina",
+    "liga": "Liga Profesional de Fútbol",
+    "fundacion": 1935,
+    "cantiadDeTitulosNacionales": 1,
+    "cantidadDeTitulosnternacionales": 1,
+    "capacidadEstadio": 25000,
+    "coloresCamiseta": {
+      "color1": "verde",
+      "color2": "amarillo"
+    }
+  }
 ]
-
 
