@@ -8,8 +8,12 @@ app.use(express.json());
 //Ruta principal
 app.use('/equipos', importRoutes)
 
-
 //inicia el servidor
 app.listen(port, () => {
     console.log(`Servidor escuchando en el puerto ${port}`);
 });
+
+
+//Modelo para la parte del Post.
+//const { router } = require('./vistas/vista.js');
+//app.use('/equipos', router);
