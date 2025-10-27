@@ -95,3 +95,38 @@ function eliminarEquipo(req, res) {
 //para importar
 eliminarEquipo
 */
+
+
+/*
+//función agregar equipo
+function agregarEquipo(req, res) {
+  const nuevoEquipo = req.body;
+
+  // Validar campos obligatorios
+  const campos = [
+    "nombre", "pais", "liga", "fundacion",
+    "cantidadDeTitulosNacionales", "cantidadDeTitulosInternacionales",
+    "capacidadEstadio", "coloresCamiseta"
+  ];
+  for (let campo of campos) {
+    if (!nuevoEquipo[campo]) {
+      return res.status(400).json({ mensaje: `Falta el campo '${campo}'` });
+    }
+  }
+
+  // Llamar al modelo
+  const resultado = importModelo.agregarEquipo(nuevoEquipo);
+
+  if (!resultado.exito) {
+    return res.status(400).json({ mensaje: resultado.mensaje });
+  }
+
+  res.status(201).json({
+    mensaje: "Equipo agregado correctamente.",
+    equipo: resultado.equipo
+  });
+}
+
+//para exportar
+agregarEquipo
+*/

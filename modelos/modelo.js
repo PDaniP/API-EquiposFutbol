@@ -106,7 +106,10 @@ class EquipoModelo {
 //para el export
 EquipoModelo,*/
 
+
+
 /*
+//para eliminar equipos
 const fs = require('fs');
 const path = require('path');
 
@@ -134,4 +137,54 @@ const eliminarEquipo = (nombre) => {
 
 //para el export
 eliminarEquipo
+*/
+
+
+
+/*
+const fs = require('fs');
+const path = require('path');
+
+// Ruta del archivo JSON
+const rutaDatos = path.join(__dirname, "../data/equiposFutbol.json");
+
+//función agregar equipo
+const agregarEquipo = (nuevoEquipo) => {
+  // Evitar duplicados por nombre
+  const existe = datos.some(
+    (equipo) => equipo.nombre.toLowerCase() === nuevoEquipo.nombre.toLowerCase()
+  );
+  if (existe) return { exito: false, mensaje: "Ya existe un equipo con ese nombre." };
+
+  // Generar id automático (máximo actual + 1)
+  const nuevoId = datos.length > 0 ? Math.max(...datos.map(e => e.id)) + 1 : 1;
+
+  // Crear el objeto con id primero
+  const equipoConIdPrimero = {
+    id: nuevoId,
+    nombre: nuevoEquipo.nombre,
+    pais: nuevoEquipo.pais,
+    liga: nuevoEquipo.liga,
+    fundacion: nuevoEquipo.fundacion,
+    cantidadDeTitulosNacionales: nuevoEquipo.cantidadDeTitulosNacionales,
+    cantidadDeTitulosInternacionales: nuevoEquipo.cantidadDeTitulosInternacionales,
+    capacidadEstadio: nuevoEquipo.capacidadEstadio,
+    coloresCamiseta: {
+      color1: nuevoEquipo.coloresCamiseta.color1,
+      color2: nuevoEquipo.coloresCamiseta.color2,
+      color3: nuevoEquipo.coloresCamiseta.color3
+    }
+  };
+
+  // Agregar al array
+  datos.push(equipoConIdPrimero);
+
+  // Guardar en el archivo
+  fs.writeFileSync(rutaDatos, JSON.stringify(datos, null, 2), "utf-8");
+
+  return { exito: true, equipo: equipoConIdPrimero };
+};
+
+//para exportar
+agregarEquipo
 */

@@ -58,3 +58,9 @@ module.exports = {
 router.delete('/eliminar/:nombre', datosDesdeControlador.eliminarEquipo);
 
 */
+
+
+/*
+//Ruta POST para agregar un nuevo equipo
+router.post('/agregar', datosDesdeControlador.agregarEquipo);
+*/
