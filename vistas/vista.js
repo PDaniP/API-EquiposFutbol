@@ -67,8 +67,8 @@ router.post('/agregar', datosDesdeControlador.agregarEquipo);
 
 
 /*
-//Rutas PUT (actualizar datos específicos)
-router.put('/actualizar/nacionales/:nombre', datosDesdeControlador.actualizarTitulosNacionales);
-router.put('/actualizar/internacionales/:nombre', datosDesdeControlador.actualizarTitulosInternacionales);
-router.put('/actualizar/capacidad/:nombre', datosDesdeControlador.actualizarCapacidad);
+//Rutas PATCH (actualizar datos específicos)
+router.PATCH('/actualizar/nacionales/:nombre', datosDesdeControlador.actualizarTitulosNacionales);
+router.PATCH('/actualizar/internacionales/:nombre', datosDesdeControlador.actualizarTitulosInternacionales);
+router.PATCH('/actualizar/capacidad/:nombre', datosDesdeControlador.actualizarCapacidad);
 */
