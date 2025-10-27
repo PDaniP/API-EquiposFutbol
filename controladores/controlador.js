@@ -11,7 +11,7 @@ function mostrarDatos(req, res) {
 
 //Funcion para mostrar titulos nacionales.
 function mostrarTitulos(req, res) {
-    const titulo = parseInt(req.params.nacionales)
+    const titulo = req.params.nacionales
     const datos = importModelo.titulosNacionales(titulo);
     res.status(200).json(datos)
 }
