@@ -64,3 +64,11 @@ router.delete('/eliminar/:nombre', datosDesdeControlador.eliminarEquipo);
 //Ruta POST para agregar un nuevo equipo
 router.post('/agregar', datosDesdeControlador.agregarEquipo);
 */
+
+
+/*
+//Rutas PUT (actualizar datos específicos)
+router.put('/actualizar/nacionales/:nombre', datosDesdeControlador.actualizarTitulosNacionales);
+router.put('/actualizar/internacionales/:nombre', datosDesdeControlador.actualizarTitulosInternacionales);
+router.put('/actualizar/capacidad/:nombre', datosDesdeControlador.actualizarCapacidad);
+*/

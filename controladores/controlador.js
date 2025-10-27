@@ -130,3 +130,66 @@ function agregarEquipo(req, res) {
 //para exportar
 agregarEquipo
 */
+
+
+/*
+//funciones para actualizar datos
+//PUT - Actualizar títulos nacionales
+function actualizarTitulosNacionales(req, res) {
+  const nombre = req.params.nombre;
+  const nuevosTitulos = parseInt(req.body.cantidadDeTitulosNacionales);
+
+  if (isNaN(nuevosTitulos) || nuevosTitulos < 0) {
+    return res.status(400).json({ mensaje: "El valor de títulos nacionales debe ser un número válido." });
+  }
+
+  const resultado = importModelo.actualizarTitulosNacionales(nombre, nuevosTitulos);
+
+  if (!resultado.exito) return res.status(404).json({ mensaje: resultado.mensaje });
+  res.status(200).json({
+    mensaje: `Títulos nacionales de '${nombre}' actualizados correctamente.`,
+    equipo: resultado.equipo
+  });
+}
+
+//PUT - Actualizar títulos internacionales
+function actualizarTitulosInternacionales(req, res) {
+  const nombre = req.params.nombre;
+  const nuevosTitulos = parseInt(req.body.cantidadDeTitulosInternacionales);
+
+  if (isNaN(nuevosTitulos) || nuevosTitulos < 0) {
+    return res.status(400).json({ mensaje: "El valor de títulos internacionales debe ser un número válido." });
+  }
+
+  const resultado = importModelo.actualizarTitulosInternacionales(nombre, nuevosTitulos);
+
+  if (!resultado.exito) return res.status(404).json({ mensaje: resultado.mensaje });
+  res.status(200).json({
+    mensaje: `Títulos internacionales de '${nombre}' actualizados correctamente.`,
+    equipo: resultado.equipo
+  });
+}
+
+//PUT - Actualizar capacidad del estadio
+function actualizarCapacidad(req, res) {
+  const nombre = req.params.nombre;
+  const nuevaCapacidad = parseInt(req.body.capacidadEstadio);
+
+  if (isNaN(nuevaCapacidad) || nuevaCapacidad < 0) {
+    return res.status(400).json({ mensaje: "La capacidad debe ser un número válido." });
+  }
+
+  const resultado = importModelo.actualizarCapacidad(nombre, nuevaCapacidad);
+
+  if (!resultado.exito) return res.status(404).json({ mensaje: resultado.mensaje });
+  res.status(200).json({
+    mensaje: `Capacidad del estadio de '${nombre}' actualizada correctamente.`,
+    equipo: resultado.equipo
+  });
+}
+
+//para importar
+actualizarTitulosNacionales,
+  actualizarTitulosInternacionales,
+  actualizarCapacidad
+*/

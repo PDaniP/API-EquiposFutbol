@@ -188,3 +188,52 @@ const agregarEquipo = (nuevoEquipo) => {
 //para exportar
 agregarEquipo
 */
+
+
+/*
+Funcion para actualizar
+
+const fs = require('fs');
+const path = require('path');
+const rutaDatos = path.join(__dirname, "../data/equiposFutbol.json");
+
+//Función auxiliar para guardar cambios
+function guardarDatos() {
+  fs.writeFileSync(rutaDatos, JSON.stringify(datos, null, 2), "utf-8");
+}
+
+//Actualizar títulos nacionales
+const actualizarTitulosNacionales = (nombre, nuevosTitulos) => {
+  const equipo = datos.find(e => e.nombre.toLowerCase() === nombre.toLowerCase());
+  if (!equipo) return { exito: false, mensaje: "Equipo no encontrado." };
+
+  equipo.cantidadDeTitulosNacionales = nuevosTitulos;
+  guardarDatos();
+  return { exito: true, equipo };
+};
+
+//Actualizar títulos internacionales
+const actualizarTitulosInternacionales = (nombre, nuevosTitulos) => {
+  const equipo = datos.find(e => e.nombre.toLowerCase() === nombre.toLowerCase());
+  if (!equipo) return { exito: false, mensaje: "Equipo no encontrado." };
+
+  equipo.cantidadDeTitulosInternacionales = nuevosTitulos;
+  guardarDatos();
+  return { exito: true, equipo };
+};
+
+//Actualizar capacidad del estadio
+const actualizarCapacidad = (nombre, nuevaCapacidad) => {
+  const equipo = datos.find(e => e.nombre.toLowerCase() === nombre.toLowerCase());
+  if (!equipo) return { exito: false, mensaje: "Equipo no encontrado." };
+
+  equipo.capacidadEstadio = nuevaCapacidad;
+  guardarDatos();
+  return { exito: true, equipo };
+};
+
+//para el import
+actualizarTitulosNacionales,
+actualizarTitulosInternacionales,
+actualizarCapacidad
+*/
