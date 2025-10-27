@@ -9,6 +9,13 @@ function mostrarDatos(req, res) {
     res.status(200).json(datos)
 }
 
+//Funcion para mostrar los equipor por ID
+function mostarPorID(req, res) {
+    const datosID = parseInt(req.params.id)
+    const datos = importModelo.mostrarEquipoPorID(datosID)
+    res.status(200).json(datos)
+}
+
 //Funcion para mostrar titulos nacionales.
 function mostrarTitulos(req, res) {
     const titulo = req.params.nacionales
@@ -38,6 +45,7 @@ function mostrarCapacidadEstadio(req, res) {
 
 //Export de funciones.
 module.exports = {
+    mostarPorID,
     mostrarDatos,
     mostrarTitulos,
     mostrarTitulosInter,

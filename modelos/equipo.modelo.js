@@ -1,8 +1,12 @@
 //El modelo busca informacion en la base de datos y las envia al controlador.
+const fs = require('fs');
+const path = require('path');
 
+// Ruta del archivo JSON
+const rutaDatos = path.join(__dirname, "../data/equiposFutbol.json");
+const leerDatos = fs.readFileSync(rutaDatos, "utf-8")
 //variable para importar los datos del json
-const datos = require("../data/equiposFutbol.json");
-
+const datos = JSON.parse(leerDatos)
 //console.log(datos[0].nombre)
 
 //Funcion para mostrar todos los datos
@@ -11,6 +15,11 @@ const mostrarTodosLosDatos = () => {
 };
 
 //console.log(datos[0].cantiadDeTitulosNacionales)
+
+//mostrar equipos por id
+const mostrarEquipoPorID = (id) => {
+  return datos.find((equipo) => equipo.id === id);
+}
 
 //muestra la los equipos con mas de x titulos nacionales
 const titulosNacionales = (titulos) => {
@@ -55,11 +64,12 @@ const capEstadio = (capacidad) => {
 
 //Para exportar
 module.exports = {
+  mostrarEquipoPorID,
   mostrarTodosLosDatos,
   titulosNacionales,
   titulosInternacionales,
   capEstadio,
-  
+
 };
 
 /*

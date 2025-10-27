@@ -9,6 +9,9 @@ const router = express.Router();
 //ruta para mostrar todos los datos.
 router.get('/lista', datosDesdeControlador.mostrarDatos);
 
+//ruta para mostrar equipos por ID.
+router.get('/idEquipo/:id', datosDesdeControlador.mostarPorID)
+
 //ruta para mostrar titulos nacionales.
 router.get('/nacionales/:nacionales', datosDesdeControlador.mostrarTitulos)
 
