@@ -1,7 +1,7 @@
 //Para mostrar la informacion.
 //se define que tipo de metodo HTTP se usa y con que funcion.
 
-const datosDesdeControlador = require("../controladores/controlador");
+const datosDesdeControlador = require("../controladores/equipo.controlador");
 const express = require('express');
 //importa las funcionalidades del objeto router en express.
 const router = express.Router();
