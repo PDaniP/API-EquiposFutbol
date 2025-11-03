@@ -162,6 +162,32 @@ const filtrarPorLiga = (liga) => {
   return equiposFiltrados;
 };
 
+//filtra equipos por país y que tengan títulos internacionales
+const filtrarPorPaisConTitulosInt = (pais) => {
+  const paisBusqueda = pais.toLowerCase();
+
+  const equiposFiltrados = datos.filter((equipo) => {
+    // Asegurarse de que el equipo tenga las propiedades
+    if (!equipo.pais || equipo.cantidadDeTitulosInternacionales === undefined) {
+      return false;
+    }
+    
+    // Ambas condiciones deben cumplirse
+    const coincidePais = equipo.pais.toLowerCase() === paisBusqueda;
+    const tieneTitulos = equipo.cantidadDeTitulosInternacionales > 0;
+
+    return coincidePais && tieneTitulos;
+  });
+
+  // Mapeamos para devolver la info relevante
+  return equiposFiltrados.map((equipo) => ({
+    nombre: equipo.nombre,
+    pais: equipo.pais,
+    cantidadDeTitulosInternacionales: equipo.cantidadDeTitulosInternacionales,
+  }));
+};
+
+
 
 //Para exportar
 module.exports = {
@@ -174,7 +200,8 @@ module.exports = {
   filtrarPorColor,
   buscarPorNombre,
   filtrarPorPais,
-  filtrarPorLiga
+  filtrarPorLiga,
+  filtrarPorPaisConTitulosInt
 };
 
 /*

@@ -37,7 +37,7 @@ function mostrarCapacidadEstadio(req, res) {
     res.status(200).json(datos)
 }
 
-//Funcion unificada para filtrar por año de fundación
+//Funcion unificada para filtrar por año de fundacion
 function mostrarEquiposPorFundacion(req, res) {
   // Obtenemos ambos parámetros de la URL
   const anio = parseInt(req.params.anio);
@@ -76,7 +76,7 @@ function mostrarEquiposPorNombre(req, res) {
   res.status(200).json(datos);
 }
 
-//Funcion para mostrar equipos por país
+//Funcion para mostrar equipos por pais
 function mostrarEquiposPorPais(req, res) {
   const pais = req.params.pais;
   const datos = importModelo.filtrarPorPais(pais);
@@ -90,6 +90,15 @@ function mostrarEquiposPorLiga(req, res) {
   res.status(200).json(datos);
 }
 
+//Funcion para mostrar equipos por pais y que tengan titulos internacionales
+function mostrarEquiposPorPaisConTitulosInt(req, res) {
+  const pais = req.params.pais;
+  const datos = importModelo.filtrarPorPaisConTitulosInt(pais);
+  res.status(200).json(datos);
+}
+
+
+
 //Export de funciones.
 module.exports = {
     mostarPorID,
@@ -101,7 +110,8 @@ module.exports = {
     mostrarEquiposPorColor,
     mostrarEquiposPorNombre,
     mostrarEquiposPorPais,
-    mostrarEquiposPorLiga
+    mostrarEquiposPorLiga,
+    mostrarEquiposPorPaisConTitulosInt
 }
 
 /*

@@ -33,11 +33,20 @@ router.get('/colores/:color1/:color2', datosDesdeControlador.mostrarEquiposPorCo
 //ruta para mostrar equipos por nombre (ej: /nombre/real) puede usasrse nombre completo o parcial
 router.get('/nombre/:nombre', datosDesdeControlador.mostrarEquiposPorNombre);
 
-//ruta para mostrar equipos por país (ej: /pais/Italia)
+//ruta para filtrar por pais y que tengan titulos internacionales  (ej: /pais/España/internacionales)
+router.get('/pais/:pais/internacionales', datosDesdeControlador.mostrarEquiposPorPaisConTitulosInt)
+
+//ruta para mostrar equipos por pais (ej: /pais/Italia)
 router.get('/pais/:pais', datosDesdeControlador.mostrarEquiposPorPais);
 
 //ruta para mostrar equipos por liga (ej: /liga/Premier League)
 router.get('/liga/:liga', datosDesdeControlador.mostrarEquiposPorLiga);
+
+//ruta para filtrar por pais y que tengan titulos internacionales  (ej: /pais/España/internacionales)
+router.get('/pais/:pais/internacionales', datosDesdeControlador.mostrarEquiposPorPaisConTitulosInt);
+
+
+
 
 
 //Exportacion de router.
