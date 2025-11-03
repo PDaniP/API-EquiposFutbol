@@ -236,6 +236,40 @@ function actualizarTitulosInter(req, res) {
   res.status(200).json(equipoActualizado);
 }
 
+// Función para actualizar (PATCH) la capacidad del estadio
+function actualizarCapacidad(req, res) {
+  // 1. Obtener el ID de los params
+  const id = parseInt(req.params.id);
+
+  // 2. Obtener la nueva capacidad desde el body
+  //    Esperamos un JSON como: { "capacidad": 55000 }
+  const { capacidad } = req.body;
+  
+  // 3. Validaciones
+  if (isNaN(id)) {
+    return res.status(400).json({ error: "ID inválido." });
+  }
+  
+  if (capacidad === undefined || isNaN(parseInt(capacidad))) {
+    return res.status(400).json({ error: "Datos de 'capacidad' inválidos o no proporcionados en el body." });
+  }
+
+  // 4. Llamar al modelo
+  const equipoActualizado = importModelo.actualizarCapacidadEstadio(id, parseInt(capacidad));
+
+  // 5. Manejar la respuesta
+  if (equipoActualizado === null) {
+    return res.status(404).json({ error: "Equipo no encontrado." });
+  }
+  if (equipoActualizado.error) {
+    return res.status(500).json({ error: "Error del servidor al actualizar." });
+  }
+
+  // 6. Exito
+  res.status(200).json(equipoActualizado);
+}
+
+
 
 
 
@@ -257,7 +291,8 @@ module.exports = {
     crearEquipo,
     borrarEquipo,
     actualizarTitulosNac,
-    actualizarTitulosInter
+    actualizarTitulosInter,
+    actualizarCapacidad
 }
 
 /*

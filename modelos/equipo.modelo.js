@@ -339,7 +339,29 @@ const actualizarTitulosInternacionales = (id, nuevaCantidad) => {
   }
 };
 
+// Actualiza (PATCH) solo la capacidad del estadio de un equipo por ID
+const actualizarCapacidadEstadio = (id, nuevaCapacidad) => {
+  // 1. Encontrar el equipo
+  const equipoAActualizar = datos.find(equipo => equipo.id === id);
 
+  // 2. Si no se encuentra, devolver null
+  if (!equipoAActualizar) {
+    return null; // "No Encontrado"
+  }
+
+  // 3. Actualizar el campo
+  equipoAActualizar.capacidadEstadio = nuevaCapacidad;
+
+  // 4. Re-escribir el archivo JSON
+  try {
+    fs.writeFileSync(rutaDatos, JSON.stringify(datos, null, 2), "utf-8");
+    // 5. Devolver el equipo actualizado
+    return equipoAActualizar;
+  } catch (error) {
+    console.error("Error al escribir en el archivo JSON:", error);
+    return { error: "Error de escritura al actualizar." };
+  }
+};
 
 
 
@@ -366,7 +388,8 @@ module.exports = {
   agregarEquipo,
   eliminarEquipo,
   actualizarTitulosNacionales,
-  actualizarTitulosInternacionales
+  actualizarTitulosInternacionales,
+  actualizarCapacidadEstadio
 };
 
 /*

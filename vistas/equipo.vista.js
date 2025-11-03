@@ -68,6 +68,10 @@ router.patch('/titulos/nacionales/:id', datosDesdeControlador.actualizarTitulosN
 // Ruta para ACTUALIZAR (PATCH) solo los titulos internacionales (ej: PATCH /titulos/internacionales/1)
 router.patch('/titulos/internacionales/:id', datosDesdeControlador.actualizarTitulosInter);
 
+// Ruta para ACTUALIZAR (PATCH) solo la capacidad del estadio (ej: PATCH /capacidad/1)
+router.patch('/capacidad/:id', datosDesdeControlador.actualizarCapacidad);
+
+
 
 
 //Exportacion de router.
