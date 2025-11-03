@@ -21,7 +21,7 @@ router.get('/internacionales/:internacionales', datosDesdeControlador.mostrarTit
 //ruta para mostrar capacidad del estadio. (ej: /capacidad/45000)
 router.get('/capacidad/:capacidad', datosDesdeControlador.mostrarCapacidadEstadio)
 
-//ruta para mostrar por fundación. Se puede usar "anterior" o "posterior" en :tipo (ej: /fundacion/anterior/1910)
+//ruta para mostrar por fundacion. Se puede usar "anterior" o "posterior" en :tipo (ej: /fundacion/anterior/1910)
 router.get('/fundacion/:tipo/:anio', datosDesdeControlador.mostrarEquiposPorFundacion);
 
 //ruta para mostrar por 1 color (ej: /colores/rojo)
@@ -45,8 +45,16 @@ router.get('/liga/:liga', datosDesdeControlador.mostrarEquiposPorLiga);
 //ruta para filtrar por pais y que tengan titulos internacionales  (ej: /pais/España/internacionales)
 router.get('/pais/:pais/internacionales', datosDesdeControlador.mostrarEquiposPorPaisConTitulosInt);
 
-
-
+//ruta para filtrar por query (ej: /buscar?pais=Italia&liga=Serie A)
+router.get('/buscar', datosDesdeControlador.mostrarEquiposConQuery);
+/*
+Ejemplo de busquedas:
+/buscar?pais=Argentina
+/buscar?liga=premier
+/buscar?titulosInternacionales=10
+/buscar?pais=España&titulosNacionales=30
+/buscar?pais=Inglaterra&liga=premier&titulosInternacionales=5
+*/
 
 
 //Exportacion de router.

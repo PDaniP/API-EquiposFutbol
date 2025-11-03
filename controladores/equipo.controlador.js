@@ -97,6 +97,13 @@ function mostrarEquiposPorPaisConTitulosInt(req, res) {
   res.status(200).json(datos);
 }
 
+// Función para mostrar equipos usando filtros query
+function mostrarEquiposConQuery(req, res) {
+  const datos = importModelo.filtrarConQuery(req.query);
+  res.status(200).json(datos);
+}
+
+
 
 
 //Export de funciones.
@@ -111,7 +118,8 @@ module.exports = {
     mostrarEquiposPorNombre,
     mostrarEquiposPorPais,
     mostrarEquiposPorLiga,
-    mostrarEquiposPorPaisConTitulosInt
+    mostrarEquiposPorPaisConTitulosInt,
+    mostrarEquiposConQuery
 }
 
 /*

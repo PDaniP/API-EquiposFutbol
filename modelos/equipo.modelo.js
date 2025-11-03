@@ -60,7 +60,7 @@ const capEstadio = (capacidad) => {
   return capEst;
 };
 
-//muestra equipos según el año de fundación (anterior o posterior)
+//muestra equipos segun el año de fundacion (anterior o posterior)
 const filtrarPorFundacion = (anio, tipo) => {
   // Usamos filter() para filtrar el array principal
   const equiposFiltrados = datos.filter((equipo) => {
@@ -115,7 +115,7 @@ const filtrarPorColor = (color1, color2) => {
   }));
 };
 
-//busca equipos cuyo nombre tenga el texto de búsqueda (no sensible a may/min)
+//busca equipos cuyo nombre tenga el texto de busqueda (no sensible a may/min)
 const buscarPorNombre = (nombre) => {
   // Convertimos el término de búsqueda a minúsculas
   const nombreBusqueda = nombre.toLowerCase();
@@ -130,7 +130,7 @@ const buscarPorNombre = (nombre) => {
   return equiposFiltrados;
 };
 
-//filtra equipos por país específico (coincidencia exacta, no sensible a may/min)
+//filtra equipos por pais especifico (coincidencia exacta, no sensible a may/min)
 const filtrarPorPais = (pais) => {
   const paisBusqueda = pais.toLowerCase();
 
@@ -146,7 +146,7 @@ const filtrarPorPais = (pais) => {
   return equiposFiltrados;
 };
 
-//filtra equipos por una liga específica (coincidencia exacta, no sensible a may/min)
+//filtra equipos por una liga especifica (coincidencia exacta, no sensible a may/min)
 const filtrarPorLiga = (liga) => {
   const ligaBusqueda = liga.toLowerCase();
 
@@ -162,7 +162,7 @@ const filtrarPorLiga = (liga) => {
   return equiposFiltrados;
 };
 
-//filtra equipos por país y que tengan títulos internacionales
+//filtra equipos por pais y que tengan titulos internacionales
 const filtrarPorPaisConTitulosInt = (pais) => {
   const paisBusqueda = pais.toLowerCase();
 
@@ -187,6 +187,46 @@ const filtrarPorPaisConTitulosInt = (pais) => {
   }));
 };
 
+//Filtra equipos usando un objeto de queries (filtros)
+const filtrarConQuery = (filtros) => {
+  // Empezamos con todos los datos
+  let equiposFiltrados = [...datos];
+
+  // Aplicamos filtro de pais (si es que existe en la query), ej: ?pais=España
+  if (filtros.pais) {
+    equiposFiltrados = equiposFiltrados.filter((equipo) =>
+      equipo.pais.toLowerCase() === filtros.pais.toLowerCase()
+    );
+  }
+
+  // Aplicamos filtro de liga (busqueda parcial), ej: ?liga=Premier
+  if (filtros.liga) {
+    equiposFiltrados = equiposFiltrados.filter((equipo) =>
+      equipo.liga.toLowerCase().includes(filtros.liga.toLowerCase())
+    );
+  }
+
+  // Aplicamos filtro de titulos nacionales (mayor que), ej: ?titulosNacionales=50
+  if (filtros.titulosNacionales) {
+    const titulos = parseInt(filtros.titulosNacionales);
+    equiposFiltrados = equiposFiltrados.filter((equipo) =>
+      equipo.cantidadDeTitulosNacionales > titulos
+    );
+  }
+
+  // Aplicamos filtro de titulos internacionales (mayor que), ej: ?titulosInternacionales=10
+  if (filtros.titulosInternacionales) {
+    const titulos = parseInt(filtros.titulosInternacionales);
+    equiposFiltrados = equiposFiltrados.filter((equipo) =>
+      equipo.cantidadDeTitulosInternacionales > titulos
+    );
+  }
+  return equiposFiltrados;
+};
+
+
+
+
 
 
 //Para exportar
@@ -201,7 +241,8 @@ module.exports = {
   buscarPorNombre,
   filtrarPorPais,
   filtrarPorLiga,
-  filtrarPorPaisConTitulosInt
+  filtrarPorPaisConTitulosInt,
+  filtrarConQuery
 };
 
 /*
