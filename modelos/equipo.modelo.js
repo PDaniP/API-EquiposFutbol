@@ -315,7 +315,29 @@ const actualizarTitulosNacionales = (id, nuevaCantidad) => {
   }
 };
 
+// Actualiza (PATCH) solo los titulos internacionales de un equipo por ID
+const actualizarTitulosInternacionales = (id, nuevaCantidad) => {
+  // 1. Encontrar el equipo especifico en el array 'datos'
+  const equipoAActualizar = datos.find(equipo => equipo.id === id);
 
+  // 2. Si no se encuentra el equipo, devolver null
+  if (!equipoAActualizar) {
+    return null; // "No Encontrado"
+  }
+
+  // 3. Actualizar solo el campo necesario
+  equipoAActualizar.cantidadDeTitulosInternacionales = nuevaCantidad;
+
+  // 4. Re-escribir el archivo JSON con los datos actualizados
+  try {
+    fs.writeFileSync(rutaDatos, JSON.stringify(datos, null, 2), "utf-8");
+    // 5. Devolver el equipo completo ya actualizado
+    return equipoAActualizar;
+  } catch (error) {
+    console.error("Error al escribir en el archivo JSON:", error);
+    return { error: "Error de escritura al actualizar." };
+  }
+};
 
 
 
@@ -343,7 +365,8 @@ module.exports = {
   filtrarConQuery,
   agregarEquipo,
   eliminarEquipo,
-  actualizarTitulosNacionales
+  actualizarTitulosNacionales,
+  actualizarTitulosInternacionales
 };
 
 /*

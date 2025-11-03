@@ -202,7 +202,39 @@ function actualizarTitulosNac(req, res) {
   res.status(200).json(equipoActualizado);
 }
 
+// Funcion para actualizar (PATCH) titulos internacionales
+function actualizarTitulosInter(req, res) {
+  // 1. Obtener el ID de los parametros de la ruta
+  const id = parseInt(req.params.id);
 
+  // 2. Obtener la nueva cantidad desde el body
+  //    Esperamos un JSON como: { "titulos": 26 }
+  const { titulos } = req.body;
+  
+  // 3. Validaciones
+  if (isNaN(id)) {
+    return res.status(400).json({ error: "ID inválido." });
+  }
+  
+  // Validamos que 'titulos' se haya enviado y sea un numero
+  if (titulos === undefined || isNaN(parseInt(titulos))) {
+    return res.status(400).json({ error: "Datos de 'titulos' inválidos o no proporcionados en el body." });
+  }
+
+  // 4. Llamar al modelo
+  const equipoActualizado = importModelo.actualizarTitulosInternacionales(id, parseInt(titulos));
+
+  // 5. Manejar la respuesta
+  if (equipoActualizado === null) {
+    return res.status(404).json({ error: "Equipo no encontrado." });
+  }
+  if (equipoActualizado.error) {
+    return res.status(500).json({ error: "Error del servidor al actualizar." });
+  }
+
+  // 6. Exito
+  res.status(200).json(equipoActualizado);
+}
 
 
 
@@ -224,7 +256,8 @@ module.exports = {
     mostrarEquiposConQuery,
     crearEquipo,
     borrarEquipo,
-    actualizarTitulosNac
+    actualizarTitulosNac,
+    actualizarTitulosInter
 }
 
 /*

@@ -65,7 +65,8 @@ router.delete('/eliminar/:id', datosDesdeControlador.borrarEquipo);
 //ruta para ACTUALIZAR (PATCH) solo los titulos nacionales (ej: PATCH /titulos/nacionales/1  el 1 corresponde al id) se ingresa un objeto {"titulos": 76}
 router.patch('/titulos/nacionales/:id', datosDesdeControlador.actualizarTitulosNac);
 
-
+// Ruta para ACTUALIZAR (PATCH) solo los titulos internacionales (ej: PATCH /titulos/internacionales/1)
+router.patch('/titulos/internacionales/:id', datosDesdeControlador.actualizarTitulosInter);
 
 
 
