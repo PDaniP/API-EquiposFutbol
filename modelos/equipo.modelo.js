@@ -60,7 +60,7 @@ const capEstadio = (capacidad) => {
   return capEst;
 };
 
-// Muestra equipos según el año de fundación (anterior o posterior)
+//muestra equipos según el año de fundación (anterior o posterior)
 const filtrarPorFundacion = (anio, tipo) => {
   // Usamos filter() para filtrar el array principal
   const equiposFiltrados = datos.filter((equipo) => {
@@ -79,6 +79,60 @@ const filtrarPorFundacion = (anio, tipo) => {
   }));
 };
 
+//filtra equipos por uno o dos colores de camiseta
+const filtrarPorColor = (color1, color2) => {
+  // Normalizar colores a minúscula (si existen)
+  const c1 = color1 ? color1.toLowerCase() : null;
+  const c2 = color2 ? color2.toLowerCase() : null;
+
+  const equiposFiltrados = datos.filter((equipo) => {
+    // Asegurarse de que el equipo tenga la estructura de colores
+    if (!equipo.coloresCamiseta) {
+      return false;
+    }
+    
+    const { color1: teamC1, color2: teamC2 } = equipo.coloresCamiseta;
+
+    // Escenario 1: Se provee solo 1 color (c1 existe, c2 NO existe)
+    if (c1 && !c2) {
+      // Comprueba si el color 1 está en CUALQUIERA de las dos posiciones
+      return teamC1 === c1 || teamC2 === c1;
+    } 
+    
+    // Escenario 2: Se proveen 2 colores (ambos existen)
+    else if (c1 && c2) {
+      // Comprueba que AMBOS colores estén (sin importar el orden)
+      return (teamC1 === c1 && teamC2 === c2) || (teamC1 === c2 && teamC2 === c1);
+    }
+    
+    return false; // No se proveyó color1 o caso no manejado
+  });
+
+  // Devolvemos el nombre y los colores del equipo
+  return equiposFiltrados.map((equipo) => ({
+    nombre: equipo.nombre,
+    colores: equipo.coloresCamiseta,
+  }));
+};
+
+//Busca equipos cuyo nombre contenga el texto de búsqueda (no sensible a may/min)
+const buscarPorNombre = (nombre) => {
+  // Convertimos el término de búsqueda a minúsculas
+  const nombreBusqueda = nombre.toLowerCase();
+
+  // Filtramos el array de datos
+  const equiposFiltrados = datos.filter((equipo) => {
+    // Convertimos el nombre del equipo a minúsculas y verificamos si incluye el término
+    return equipo.nombre.toLowerCase().includes(nombreBusqueda);
+  });
+  
+  // Devolvemos los equipos completos que coincidieron
+  return equiposFiltrados;
+};
+
+
+
+
 //Para exportar
 module.exports = {
   mostrarEquipoPorID,
@@ -86,8 +140,9 @@ module.exports = {
   titulosNacionales,
   titulosInternacionales,
   capEstadio,
-  filtrarPorFundacion
-
+  filtrarPorFundacion,
+  filtrarPorColor,
+  buscarPorNombre
 };
 
 /*
