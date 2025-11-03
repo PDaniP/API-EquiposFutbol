@@ -1762,5 +1762,19 @@
       "color1": "negro",
       "color2": "blanco"
     }
+  },
+  {
+    "id": 127,
+    "nombre": "Pablo",
+    "pais": "Francia",
+    "liga": "Ligue 1",
+    "fundacion": 1919,
+    "cantidadDeTitulosNacionales": 76,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 18752,
+    "coloresCamiseta": {
+      "color1": "negro",
+      "color2": "blanco"
+    }
   }
 ]

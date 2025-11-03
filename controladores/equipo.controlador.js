@@ -97,7 +97,7 @@ function mostrarEquiposPorPaisConTitulosInt(req, res) {
   res.status(200).json(datos);
 }
 
-// Función para mostrar equipos usando filtros query
+//Función para mostrar equipos usando filtros query
 function mostrarEquiposConQuery(req, res) {
   const datos = importModelo.filtrarConQuery(req.query);
   res.status(200).json(datos);
@@ -108,7 +108,7 @@ function mostrarEquiposConQuery(req, res) {
 /*******************************************************************/
 
 
-// Función para crear un nuevo equipo
+//Función para crear un nuevo equipo
 function crearEquipo(req, res) {
   // Los datos del nuevo equipo vienen en req.body
   const nuevoEquipoDatos = req.body;
@@ -132,7 +132,7 @@ function crearEquipo(req, res) {
 /*******************************************************************/
 /*******************************************************************/
 
-// Funcion para eliminar un equipo
+//Funcion para eliminar un equipo
 function borrarEquipo(req, res) {
   // 1. Convertir el ID de la URL (string) a un numero
   const id = parseInt(req.params.id);
@@ -163,7 +163,44 @@ function borrarEquipo(req, res) {
   });
 }
 
+/*******************************************************************/
+/*******************************************************************/
+/*******************************************************************/
 
+
+//Funcion para actualizar (PATCH) titulos nacionales
+function actualizarTitulosNac(req, res) {
+  // 1. Obtener el ID de los parámetros de la ruta
+  const id = parseInt(req.params.id);
+
+  // 2. Obtener la nueva cantidad desde el body
+  //    Esperamos un JSON como: { "titulos": 76 }
+  const { titulos } = req.body;
+  
+  // 3. Validaciones
+  if (isNaN(id)) {
+    return res.status(400).json({ error: "ID inválido." });
+  }
+  
+  // Validamos que 'titulos' se haya enviado y sea un número
+  if (titulos === undefined || isNaN(parseInt(titulos))) {
+    return res.status(400).json({ error: "Datos de 'titulos' inválidos o no proporcionados en el body." });
+  }
+
+  // 4. Llamar al modelo
+  const equipoActualizado = importModelo.actualizarTitulosNacionales(id, parseInt(titulos));
+
+  // 5. Manejar la respuesta
+  if (equipoActualizado === null) {
+    return res.status(404).json({ error: "Equipo no encontrado." });
+  }
+  if (equipoActualizado.error) {
+    return res.status(500).json({ error: "Error del servidor al actualizar." });
+  }
+
+  // 6. Exito
+  res.status(200).json(equipoActualizado);
+}
 
 
 
@@ -186,7 +223,8 @@ module.exports = {
     mostrarEquiposPorPaisConTitulosInt,
     mostrarEquiposConQuery,
     crearEquipo,
-    borrarEquipo
+    borrarEquipo,
+    actualizarTitulosNac
 }
 
 /*

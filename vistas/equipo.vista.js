@@ -56,13 +56,14 @@ Ejemplo de busquedas:
 /buscar?pais=Inglaterra&liga=premier&titulosInternacionales=5
 */
 
-// Ruta para CREAR un nuevo equipo (usa el metodo POST)
+//ruta para CREAR un nuevo equipo (usa el metodo POST)
 router.post('/crear', datosDesdeControlador.crearEquipo);
 
-// Ruta para ELIMINAR un equipo por ID (usa el metodo DELETE)
+//ruta para ELIMINAR un equipo por ID (usa el metodo DELETE)
 router.delete('/eliminar/:id', datosDesdeControlador.borrarEquipo);
 
-
+//ruta para ACTUALIZAR (PATCH) solo los titulos nacionales (ej: PATCH /titulos/nacionales/1  el 1 corresponde al id) se ingresa un objeto {"titulos": 76}
+router.patch('/titulos/nacionales/:id', datosDesdeControlador.actualizarTitulosNac);
 
 
 
