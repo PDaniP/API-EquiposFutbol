@@ -10,8 +10,7 @@
     "capacidadEstadio": 54000,
     "coloresCamiseta": {
       "color1": "azul",
-      "color2": "amarillo",
-      "color3": "blanco"
+      "color2": "amarillo"
     }
   },
   {
@@ -25,8 +24,7 @@
     "capacidadEstadio": 83500,
     "coloresCamiseta": {
       "color1": "blanco",
-      "color2": "rojo",
-      "color3": "negro"
+      "color2": "rojo"
     }
   },
   {
@@ -222,8 +220,7 @@
     "capacidadEstadio": 17000,
     "coloresCamiseta": {
       "color1": "rojo",
-      "color2": "amarillo",
-      "color3": "blanco"
+      "color2": "blanco"
     }
   },
   {
@@ -424,92 +421,1346 @@
   },
   {
     "id": 31,
-    "nombre": "Barcelona",
-    "pais": "Argentina",
-    "liga": "Liga Profesional de Fútbol",
-    "fundacion": 1908,
-    "cantidadDeTitulosNacionales": 30,
-    "cantidadDeTitulosInternacionales": 6,
-    "capacidadEstadio": 47000,
+    "nombre": "Deportivo Alavés",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1921,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 20320,
     "coloresCamiseta": {
       "color1": "azul",
-      "color2": "rojo",
-      "color3": "blanco"
+      "color2": "blanco"
     }
   },
   {
     "id": 32,
-    "nombre": "Real Madrid",
-    "pais": "Argentina",
-    "liga": "Liga Profesional de Fútbol",
-    "fundacion": 1908,
-    "cantidadDeTitulosNacionales": 30,
-    "cantidadDeTitulosInternacionales": 6,
-    "capacidadEstadio": 47000,
+    "nombre": "Athletic Club",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1898,
+    "cantidadDeTitulosNacionales": 35,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 53289,
     "coloresCamiseta": {
-      "color1": "azul",
-      "color2": "rojo",
-      "color3": "blanco"
+      "color1": "rojo",
+      "color2": "blanco"
     }
   },
   {
     "id": 33,
-    "nombre": "valencia",
-    "pais": "Argentina",
-    "liga": "Liga Profesional de Fútbol",
-    "fundacion": 1908,
-    "cantidadDeTitulosNacionales": 30,
-    "cantidadDeTitulosInternacionales": 6,
-    "capacidadEstadio": 47000,
+    "nombre": "Atlético de Madrid",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1903,
+    "cantidadDeTitulosNacionales": 25,
+    "cantidadDeTitulosInternacionales": 8,
+    "capacidadEstadio": 70460,
     "coloresCamiseta": {
-      "color1": "azul",
-      "color2": "rojo",
-      "color3": "blanco"
+      "color1": "rojo",
+      "color2": "blanco"
     }
   },
   {
     "id": 34,
-    "nombre": "Mallorca",
-    "pais": "Argentina",
-    "liga": "Liga Profesional de Fútbol",
-    "fundacion": 1908,
-    "cantidadDeTitulosNacionales": 30,
-    "cantidadDeTitulosInternacionales": 6,
-    "capacidadEstadio": 47000,
+    "nombre": "FC Barcelona",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1899,
+    "cantidadDeTitulosNacionales": 83,
+    "cantidadDeTitulosInternacionales": 19,
+    "capacidadEstadio": 99354,
     "coloresCamiseta": {
       "color1": "azul",
-      "color2": "rojo",
-      "color3": "blanco"
+      "color2": "granate"
     }
   },
   {
     "id": 35,
-    "nombre": "Sevilla",
-    "pais": "Argentina",
-    "liga": "Liga Profesional de Fútbol",
-    "fundacion": 1908,
-    "cantidadDeTitulosNacionales": 30,
-    "cantidadDeTitulosInternacionales": 6,
-    "capacidadEstadio": 47000,
+    "nombre": "Celta de Vigo",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1923,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 1,
+    "capacidadEstadio": 24870,
     "coloresCamiseta": {
-      "color1": "azul",
-      "color2": "rojo",
-      "color3": "blanco"
+      "color1": "celeste",
+      "color2": "blanco"
     }
   },
   {
     "id": 36,
-    "nombre": "Villareal",
-    "pais": "Argentina",
-    "liga": "Liga Profesional de Fútbol",
-    "fundacion": 1908,
-    "cantidadDeTitulosNacionales": 30,
-    "cantidadDeTitulosInternacionales": 6,
-    "capacidadEstadio": 47000,
+    "nombre": "Elche CF",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1923,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 31388,
+    "coloresCamiseta": {
+      "color1": "verde",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 37,
+    "nombre": "RCD Espanyol",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1900,
+    "cantidadDeTitulosNacionales": 4,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 40000,
     "coloresCamiseta": {
       "color1": "azul",
-      "color2": "rojo",
-      "color3": "blanco"
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 38,
+    "nombre": "Getafe CF",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1983,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 16500,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "rojo"
+    }
+  },
+  {
+    "id": 39,
+    "nombre": "Girona FC",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1930,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 14624,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 40,
+    "nombre": "Levante UD",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1909,
+    "cantidadDeTitulosNacionales": 1,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 26354,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "granate"
+    }
+  },
+  {
+    "id": 41,
+    "nombre": "RCD Mallorca",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1916,
+    "cantidadDeTitulosNacionales": 2,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 23142,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "negro"
+    }
+  },
+  {
+    "id": 42,
+    "nombre": "CA Osasuna",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1920,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 23576,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "azul"
+    }
+  },
+  {
+    "id": 43,
+    "nombre": "Rayo Vallecano",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1924,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 14708,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "rojo"
+    }
+  },
+  {
+    "id": 44,
+    "nombre": "Real Betis",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1907,
+    "cantidadDeTitulosNacionales": 4,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 68887,
+    "coloresCamiseta": {
+      "color1": "verde",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 45,
+    "nombre": "Real Madrid",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1902,
+    "cantidadDeTitulosNacionales": 71,
+    "cantidadDeTitulosInternacionales": 33,
+    "capacidadEstadio": 83088,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "azul"
+    }
+  },
+  {
+    "id": 46,
+    "nombre": "Real Oviedo",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1926,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 30500,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 47,
+    "nombre": "Real Sociedad",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1909,
+    "cantidadDeTitulosNacionales": 6,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 39313,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 48,
+    "nombre": "Sevilla FC",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1890,
+    "cantidadDeTitulosNacionales": 7,
+    "cantidadDeTitulosInternacionales": 8,
+    "capacidadEstadio": 43883,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "rojo"
+    }
+  },
+  {
+    "id": 49,
+    "nombre": "Valencia CF",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1919,
+    "cantidadDeTitulosNacionales": 16,
+    "cantidadDeTitulosInternacionales": 7,
+    "capacidadEstadio": 49430,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "negro"
+    }
+  },
+  {
+    "id": 50,
+    "nombre": "Villarreal CF",
+    "pais": "España",
+    "liga": "La Liga",
+    "fundacion": 1923,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 3,
+    "capacidadEstadio": 23500,
+    "coloresCamiseta": {
+      "color1": "amarillo",
+      "color2": "azul"
+    }
+  },
+  {
+    "id": 51,
+    "nombre": "Inter Milan",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1908,
+    "cantidadDeTitulosNacionales": 37,
+    "cantidadDeTitulosInternacionales": 9,
+    "capacidadEstadio": 75817,
+    "coloresCamiseta": {
+      "color1": "negro",
+      "color2": "azul"
+    }
+  },
+  {
+    "id": 52,
+    "nombre": "AC Milan",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1899,
+    "cantidadDeTitulosNacionales": 32,
+    "cantidadDeTitulosInternacionales": 18,
+    "capacidadEstadio": 75817,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "negro"
+    }
+  },
+  {
+    "id": 53,
+    "nombre": "Juventus",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1897,
+    "cantidadDeTitulosNacionales": 61,
+    "cantidadDeTitulosInternacionales": 11,
+    "capacidadEstadio": 41507,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "negro"
+    }
+  },
+  {
+    "id": 54,
+    "nombre": "Atalanta",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1907,
+    "cantidadDeTitulosNacionales": 1,
+    "cantidadDeTitulosInternacionales": 1,
+    "capacidadEstadio": 21747,
+    "coloresCamiseta": {
+      "color1": "negro",
+      "color2": "azul"
+    }
+  },
+  {
+    "id": 55,
+    "nombre": "Bologna",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1909,
+    "cantidadDeTitulosNacionales": 10,
+    "cantidadDeTitulosInternacionales": 1,
+    "capacidadEstadio": 36000,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "azul"
+    }
+  },
+  {
+    "id": 56,
+    "nombre": "AS Roma",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1927,
+    "cantidadDeTitulosNacionales": 14,
+    "cantidadDeTitulosInternacionales": 2,
+    "capacidadEstadio": 70634,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "amarillo"
+    }
+  },
+  {
+    "id": 57,
+    "nombre": "SS Lazio",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1900,
+    "cantidadDeTitulosNacionales": 14,
+    "cantidadDeTitulosInternacionales": 2,
+    "capacidadEstadio": 70634,
+    "coloresCamiseta": {
+      "color1": "celeste",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 58,
+    "nombre": "Fiorentina",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1926,
+    "cantidadDeTitulosNacionales": 9,
+    "cantidadDeTitulosInternacionales": 1,
+    "capacidadEstadio": 43147,
+    "coloresCamiseta": {
+      "color1": "violeta",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 59,
+    "nombre": "Napoli",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1926,
+    "cantidadDeTitulosNacionales": 12,
+    "cantidadDeTitulosInternacionales": 1,
+    "capacidadEstadio": 54726,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 60,
+    "nombre": "Torino",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1906,
+    "cantidadDeTitulosNacionales": 12,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 28177,
+    "coloresCamiseta": {
+      "color1": "granate",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 61,
+    "nombre": "Genoa",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1893,
+    "cantidadDeTitulosNacionales": 10,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 33205,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "azul"
+    }
+  },
+  {
+    "id": 62,
+    "nombre": "AC Monza",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1912,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 17102,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 63,
+    "nombre": "Hellas Verona",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1903,
+    "cantidadDeTitulosNacionales": 1,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 39211,
+    "coloresCamiseta": {
+      "color1": "amarillo",
+      "color2": "azul"
+    }
+  },
+  {
+    "id": 64,
+    "nombre": "US Lecce",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1908,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 40670,
+    "coloresCamiseta": {
+      "color1": "amarillo",
+      "color2": "rojo"
+    }
+  },
+  {
+    "id": 65,
+    "nombre": "Udinese",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1896,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 1,
+    "capacidadEstadio": 25144,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "negro"
+    }
+  },
+  {
+    "id": 66,
+    "nombre": "Cagliari",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1920,
+    "cantidadDeTitulosNacionales": 1,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 16416,
+    "coloresCamcamiseta": {
+      "color1": "rojo",
+      "color2": "azul"
+    }
+  },
+  {
+    "id": 67,
+    "nombre": "Empoli FC",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1920,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 16167,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 68,
+    "nombre": "Parma",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1913,
+    "cantidadDeTitulosNacionales": 4,
+    "cantidadDeTitulosInternacionales": 4,
+    "capacidadEstadio": 27906,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "negro"
+    }
+  },
+  {
+    "id": 69,
+    "nombre": "Venezia FC",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1907,
+    "cantidadDeTitulosNacionales": 1,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 11150,
+    "coloresCamiseta": {
+      "color1": "naranja",
+      "color2": "negro"
+    }
+  },
+  {
+    "id": 70,
+    "nombre": "Como 1907",
+    "pais": "Italia",
+    "liga": "Serie A",
+    "fundacion": 1907,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 13602,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 71,
+    "nombre": "Bayer 04 Leverkusen",
+    "pais": "Alemania",
+    "liga": "Bundesliga",
+    "fundacion": 1904,
+    "cantidadDeTitulosNacionales": 4,
+    "cantidadDeTitulosInternacionales": 1,
+    "capacidadEstadio": 30210,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "negro"
+    }
+  },
+  {
+    "id": 72,
+    "nombre": "Bayern München",
+    "pais": "Alemania",
+    "liga": "Bundesliga",
+    "fundacion": 1900,
+    "cantidadDeTitulosNacionales": 63,
+    "cantidadDeTitulosInternacionales": 14,
+    "capacidadEstadio": 75024,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 73,
+    "nombre": "Borussia Dortmund",
+    "pais": "Alemania",
+    "liga": "Bundesliga",
+    "fundacion": 1909,
+    "cantidadDeTitulosNacionales": 19,
+    "cantidadDeTitulosInternacionales": 3,
+    "capacidadEstadio": 81365,
+    "coloresCamiseta": {
+      "color1": "amarillo",
+      "color2": "negro"
+    }
+  },
+  {
+    "id": 74,
+    "nombre": "RB Leipzig",
+    "pais": "Alemania",
+    "liga": "Bundesliga",
+    "fundacion": 2009,
+    "cantidadDeTitulosNacionales": 3,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 47069,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 75,
+    "nombre": "VfB Stuttgart",
+    "pais": "Alemania",
+    "liga": "Bundesliga",
+    "fundacion": 1893,
+    "cantidadDeTitulosNacionales": 9,
+    "cantidadDeTitulosInternacionales": 2,
+    "capacidadEstadio": 60058,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "rojo"
+    }
+  },
+  {
+    "id": 76,
+    "nombre": "Eintracht Frankfurt",
+    "pais": "Alemania",
+    "liga": "Bundesliga",
+    "fundacion": 1899,
+    "cantidadDeTitulosNacionales": 6,
+    "cantidadDeTitulosInternacionales": 3,
+    "capacidadEstadio": 58000,
+    "coloresCamiseta": {
+      "color1": "negro",
+      "color2": "rojo"
+    }
+  },
+  {
+    "id": 77,
+    "nombre": "TSG 1899 Hoffenheim",
+    "pais": "Alemania",
+    "liga": "Bundesliga",
+    "fundacion": 1899,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 30150,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 78,
+    "nombre": "Werder Bremen",
+    "pais": "Alemania",
+    "liga": "Bundesliga",
+    "fundacion": 1899,
+    "cantidadDeTitulosNacionales": 14,
+    "cantidadDeTitulosInternacionales": 2,
+    "capacidadEstadio": 42100,
+    "coloresCamiseta": {
+      "color1": "verde",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 79,
+    "nombre": "SC Freiburg",
+    "pais": "Alemania",
+    "liga": "Bundesliga",
+    "fundacion": 1904,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 34700,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "negro"
+    }
+  },
+  {
+    "id": 80,
+    "nombre": "1. FC Heidenheim",
+    "pais": "Alemania",
+    "liga": "Bundesliga",
+    "fundacion": 1846,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 15000,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "azul"
+    }
+  },
+  {
+    "id": 81,
+    "nombre": "FC Augsburg",
+    "pais": "Alemania",
+    "liga": "Bundesliga",
+    "fundacion": 1907,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 30660,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "rojo"
+    }
+  },
+  {
+    "id": 82,
+    "nombre": "Borussia Mönchengladbach",
+    "pais": "Alemania",
+    "liga": "Bundesliga",
+    "fundacion": 1900,
+    "cantidadDeTitulosNacionales": 9,
+    "cantidadDeTitulosInternacionales": 2,
+    "capacidadEstadio": 54042,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "verde"
+    }
+  },
+  {
+    "id": 83,
+    "nombre": "VfL Wolfsburg",
+    "pais": "Alemania",
+    "liga": "Bundesliga",
+    "fundacion": 1945,
+    "cantidadDeTitulosNacionales": 3,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 30000,
+    "coloresCamiseta": {
+      "color1": "verde",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 84,
+    "nombre": "1. FC Union Berlin",
+    "pais": "Alemania",
+    "liga": "Bundesliga",
+    "fundacion": 1966,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 22012,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 85,
+    "nombre": "Mainz 05",
+    "pais": "Alemania",
+    "liga": "Bundesliga",
+    "fundacion": 1905,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 33305,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 86,
+    "nombre": "VfL Bochum",
+    "pais": "Alemania",
+    "liga": "Bundesliga",
+    "fundacion": 1848,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 26000,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 87,
+    "nombre": "FC St. Pauli",
+    "pais": "Alemania",
+    "liga": "Bundesliga",
+    "fundacion": 1910,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 29546,
+    "coloresCamiseta": {
+      "color1": "marrón",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 88,
+    "nombre": "Holstein Kiel",
+    "pais": "Alemania",
+    "liga": "Bundesliga",
+    "fundacion": 1900,
+    "cantidadDeTitulosNacionales": 1,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 15034,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 89,
+    "nombre": "Manchester City",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1880,
+    "cantidadDeTitulosNacionales": 31,
+    "cantidadDeTitulosInternacionales": 4,
+    "capacidadEstadio": 53400,
+    "coloresCamiseta": {
+      "color1": "celeste",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 90,
+    "nombre": "Arsenal",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1886,
+    "cantidadDeTitulosNacionales": 46,
+    "cantidadDeTitulosInternacionales": 2,
+    "capacidadEstadio": 60704,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 91,
+    "nombre": "Liverpool",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1892,
+    "cantidadDeTitulosNacionales": 53,
+    "cantidadDeTitulosInternacionales": 14,
+    "capacidadEstadio": 61276,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 92,
+    "nombre": "Aston Villa",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1874,
+    "cantidadDeTitulosNacionales": 20,
+    "cantidadDeTitulosInternacionales": 3,
+    "capacidadEstadio": 42657,
+    "coloresCamiseta": {
+      "color1": "granate",
+      "color2": "celeste"
+    }
+  },
+  {
+    "id": 93,
+    "nombre": "Tottenham Hotspur",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1882,
+    "cantidadDeTitulosNacionales": 21,
+    "cantidadDeTitulosInternacionales": 3,
+    "capacidadEstadio": 62850,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "azul marino"
+    }
+  },
+  {
+    "id": 94,
+    "nombre": "Chelsea",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1905,
+    "cantidadDeTitulosNacionales": 23,
+    "cantidadDeTitulosInternacionales": 9,
+    "capacidadEstadio": 40173,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 95,
+    "nombre": "Newcastle United",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1892,
+    "cantidadDeTitulosNacionales": 11,
+    "cantidadDeTitulosInternacionales": 2,
+    "capacidadEstadio": 52257,
+    "coloresCamiseta": {
+      "color1": "negro",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 96,
+    "nombre": "Manchester United",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1878,
+    "cantidadDeTitulosNacionales": 60,
+    "cantidadDeTitulosInternacionales": 8,
+    "capacidadEstadio": 74310,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 97,
+    "nombre": "West Ham United",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1895,
+    "cantidadDeTitulosNacionales": 4,
+    "cantidadDeTitulosInternacionales": 3,
+    "capacidadEstadio": 62500,
+    "coloresCamiseta": {
+      "color1": "granate",
+      "color2": "celeste"
+    }
+  },
+  {
+    "id": 98,
+    "nombre": "Crystal Palace",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1905,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 25486,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "azul"
+    }
+  },
+  {
+    "id": 99,
+    "nombre": "Brighton & Hove Albion",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1901,
+    "cantidadDeTitulosNacionales": 1,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 31876,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 100,
+    "nombre": "AFC Bournemouth",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1899,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 11307,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "negro"
+    }
+  },
+  {
+    "id": 101,
+    "nombre": "Fulham",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1879,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 1,
+    "capacidadEstadio": 29600,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "negro"
+    }
+  },
+  {
+    "id": 102,
+    "nombre": "Wolverhampton Wanderers",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1877,
+    "cantidadDeTitulosNacionales": 11,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 31750,
+    "coloresCamiseta": {
+      "color1": "naranja",
+      "color2": "negro"
+    }
+  },
+  {
+    "id": 103,
+    "nombre": "Everton",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1878,
+    "cantidadDeTitulosNacionales": 23,
+    "cantidadDeTitulosInternacionales": 1,
+    "capacidadEstadio": 39414,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 104,
+    "nombre": "Brentford",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1889,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 17250,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 105,
+    "nombre": "Nottingham Forest",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1865,
+    "cantidadDeTitulosNacionales": 8,
+    "cantidadDeTitulosInternacionales": 3,
+    "capacidadEstadio": 30332,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 106,
+    "nombre": "Leicester City",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1884,
+    "cantidadDeTitulosNacionales": 7,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 32261,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 107,
+    "nombre": "Ipswich Town",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1878,
+    "cantidadDeTitulosNacionales": 2,
+    "cantidadDeTitulosInternacionales": 1,
+    "capacidadEstadio": 29673,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 108,
+    "nombre": "Southampton",
+    "pais": "Inglaterra",
+    "liga": "Premier League",
+    "fundacion": 1885,
+    "cantidadDeTitulosNacionales": 1,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 32384,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 109,
+    "nombre": "Paris Saint-Germain",
+    "pais": "Francia",
+    "liga": "Ligue 1",
+    "fundacion": 1970,
+    "cantidadDeTitulosNacionales": 48,
+    "cantidadDeTitulosInternacionales": 2,
+    "capacidadEstadio": 47929,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "rojo"
+    }
+  },
+  {
+    "id": 110,
+    "nombre": "AS Monaco",
+    "pais": "Francia",
+    "liga": "Ligue 1",
+    "fundacion": 1924,
+    "cantidadDeTitulosNacionales": 17,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 18523,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 111,
+    "nombre": "Stade Brestois 29",
+    "pais": "Francia",
+    "liga": "Ligue 1",
+    "fundacion": 1950,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 15931,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 112,
+    "nombre": "Lille OSC",
+    "pais": "Francia",
+    "liga": "Ligue 1",
+    "fundacion": 1944,
+    "cantidadDeTitulosNacionales": 11,
+    "cantidadDeTitulosInternacionales": 1,
+    "capacidadEstadio": 50186,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "azul"
+    }
+  },
+  {
+    "id": 113,
+    "nombre": "OGC Nice",
+    "pais": "Francia",
+    "liga": "Ligue 1",
+    "fundacion": 1904,
+    "cantidadDeTitulosNacionales": 7,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 36178,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "negro"
+    }
+  },
+  {
+    "id": 114,
+    "nombre": "Olympique Lyonnais",
+    "pais": "Francia",
+    "liga": "Ligue 1",
+    "fundacion": 1950,
+    "cantidadDeTitulosNacionales": 21,
+    "cantidadDeTitulosInternacionales": 1,
+    "capacidadEstadio": 59186,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "azul"
+    }
+  },
+  {
+    "id": 115,
+    "nombre": "RC Lens",
+    "pais": "Francia",
+    "liga": "Ligue 1",
+    "fundacion": 1906,
+    "cantidadDeTitulosNacionales": 2,
+    "cantidadDeTitulosInternacionales": 1,
+    "capacidadEstadio": 38223,
+    "coloresCamiseta": {
+      "color1": "amarillo",
+      "color2": "rojo"
+    }
+  },
+  {
+    "id": 116,
+    "nombre": "Olympique de Marseille",
+    "pais": "Francia",
+    "liga": "Ligue 1",
+    "fundacion": 1899,
+    "cantidadDeTitulosNacionales": 25,
+    "cantidadDeTitulosInternacionales": 2,
+    "capacidadEstadio": 67394,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "celeste"
+    }
+  },
+  {
+    "id": 117,
+    "nombre": "Stade de Reims",
+    "pais": "Francia",
+    "liga": "Ligue 1",
+    "fundacion": 1910,
+    "cantidadDeTitulosNacionales": 13,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 20546,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 118,
+    "nombre": "Stade Rennais",
+    "pais": "Francia",
+    "liga": "Ligue 1",
+    "fundacion": 1901,
+    "cantidadDeTitulosNacionales": 4,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 29778,
+    "coloresCamiseta": {
+      "color1": "rojo",
+      "color2": "negro"
+    }
+  },
+  {
+    "id": 119,
+    "nombre": "Toulouse FC",
+    "pais": "Francia",
+    "liga": "Ligue 1",
+    "fundacion": 1970,
+    "cantidadDeTitulosNacionales": 1,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 33150,
+    "coloresCamiseta": {
+      "color1": "violeta",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 120,
+    "nombre": "Montpellier HSC",
+    "pais": "Francia",
+    "liga": "Ligue 1",
+    "fundacion": 1919,
+    "cantidadDeTitulosNacionales": 3,
+    "cantidadDeTitulosInternacionales": 1,
+    "capacidadEstadio": 22000,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "naranja"
+    }
+  },
+  {
+    "id": 121,
+    "nombre": "RC Strasbourg Alsace",
+    "pais": "Francia",
+    "liga": "Ligue 1",
+    "fundacion": 1906,
+    "cantidadDeTitulosNacionales": 7,
+    "cantidadDeTitulosInternacionales": 1,
+    "capacidadEstadio": 26109,
+    "coloresCamiseta": {
+      "color1": "azul",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 122,
+    "nombre": "FC Nantes",
+    "pais": "Francia",
+    "liga": "Ligue 1",
+    "fundacion": 1943,
+    "cantidadDeTitulosNacionales": 15,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 35322,
+    "coloresCamiseta": {
+      "color1": "amarillo",
+      "color2": "verde"
+    }
+  },
+  {
+    "id": 123,
+    "nombre": "Le Havre AC",
+    "pais": "Francia",
+    "liga": "Ligue 1",
+    "fundacion": 1872,
+    "cantidadDeTitulosNacionales": 1,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 25178,
+    "coloresCamiseta": {
+      "color1": "azul cielo",
+      "color2": "azul marino"
+    }
+  },
+  {
+    "id": 124,
+    "nombre": "AS Saint-Étienne",
+    "pais": "Francia",
+    "liga": "Ligue 1",
+    "fundacion": 1919,
+    "cantidadDeTitulosNacionales": 22,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 41965,
+    "coloresCamiseta": {
+      "color1": "verde",
+      "color2": "blanco"
+    }
+  },
+  {
+    "id": 125,
+    "nombre": "AJ Auxerre",
+    "pais": "Francia",
+    "liga": "Ligue 1",
+    "fundacion": 1905,
+    "cantidadDeTitulosNacionales": 5,
+    "cantidadDeTitulosInternacionales": 1,
+    "capacidadEstadio": 18541,
+    "coloresCamiseta": {
+      "color1": "blanco",
+      "color2": "azul"
+    }
+  },
+  {
+    "id": 126,
+    "nombre": "Angers SCO",
+    "pais": "Francia",
+    "liga": "Ligue 1",
+    "fundacion": 1919,
+    "cantidadDeTitulosNacionales": 0,
+    "cantidadDeTitulosInternacionales": 0,
+    "capacidadEstadio": 18752,
+    "coloresCamiseta": {
+      "color1": "negro",
+      "color2": "blanco"
     }
   }
 ]
