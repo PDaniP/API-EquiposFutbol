@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-const importRoutes = require('./vistas/vista.js');
+const importRoutes = require('./vistas/equipo.vista.js');
 
 app.use(express.json());
 

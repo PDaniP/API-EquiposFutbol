@@ -1,6 +1,6 @@
 //Pido datos al modelo y los envio a vista
-const importModelo = require("../modelos/modelo")
-const importVista = require("../vistas/vista")
+const importModelo = require("../modelos/equipo.modelo")
+const importVista = require("../vistas/equipo.vista")
 
 
 //Funcion para mostrar todos los datos.
@@ -9,9 +9,16 @@ function mostrarDatos(req, res) {
     res.status(200).json(datos)
 }
 
+//Funcion para mostrar los equipor por ID
+function mostarPorID(req, res) {
+    const datosID = parseInt(req.params.id)
+    const datos = importModelo.mostrarEquipoPorID(datosID)
+    res.status(200).json(datos)
+}
+
 //Funcion para mostrar titulos nacionales.
 function mostrarTitulos(req, res) {
-    const titulo = parseInt(req.params.nacionales)
+    const titulo = req.params.nacionales
     const datos = importModelo.titulosNacionales(titulo);
     res.status(200).json(datos)
 }
@@ -38,6 +45,7 @@ function mostrarCapacidadEstadio(req, res) {
 
 //Export de funciones.
 module.exports = {
+    mostarPorID,
     mostrarDatos,
     mostrarTitulos,
     mostrarTitulosInter,

@@ -1,13 +1,16 @@
 //Para mostrar la informacion.
 //se define que tipo de metodo HTTP se usa y con que funcion.
 
-const datosDesdeControlador = require("../controladores/controlador");
+const datosDesdeControlador = require("../controladores/equipo.controlador");
 const express = require('express');
 //importa las funcionalidades del objeto router en express.
 const router = express.Router();
 
 //ruta para mostrar todos los datos.
 router.get('/lista', datosDesdeControlador.mostrarDatos);
+
+//ruta para mostrar equipos por ID.
+router.get('/idEquipo/:id', datosDesdeControlador.mostarPorID)
 
 //ruta para mostrar titulos nacionales.
 router.get('/nacionales/:nacionales', datosDesdeControlador.mostrarTitulos)
@@ -67,8 +70,8 @@ router.post('/agregar', datosDesdeControlador.agregarEquipo);
 
 
 /*
-//Rutas PUT (actualizar datos específicos)
-router.put('/actualizar/nacionales/:nombre', datosDesdeControlador.actualizarTitulosNacionales);
-router.put('/actualizar/internacionales/:nombre', datosDesdeControlador.actualizarTitulosInternacionales);
-router.put('/actualizar/capacidad/:nombre', datosDesdeControlador.actualizarCapacidad);
+//Rutas PATCH (actualizar datos específicos)
+router.PATCH('/actualizar/nacionales/:nombre', datosDesdeControlador.actualizarTitulosNacionales);
+router.PATCH('/actualizar/internacionales/:nombre', datosDesdeControlador.actualizarTitulosInternacionales);
+router.PATCH('/actualizar/capacidad/:nombre', datosDesdeControlador.actualizarCapacidad);
 */
