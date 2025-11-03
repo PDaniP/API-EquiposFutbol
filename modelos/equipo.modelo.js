@@ -115,7 +115,7 @@ const filtrarPorColor = (color1, color2) => {
   }));
 };
 
-//Busca equipos cuyo nombre contenga el texto de búsqueda (no sensible a may/min)
+//busca equipos cuyo nombre contenga el texto de búsqueda (no sensible a may/min)
 const buscarPorNombre = (nombre) => {
   // Convertimos el término de búsqueda a minúsculas
   const nombreBusqueda = nombre.toLowerCase();
@@ -130,6 +130,21 @@ const buscarPorNombre = (nombre) => {
   return equiposFiltrados;
 };
 
+// Filtra equipos por un país específico (coincidencia exacta, no sensible a may/min)
+const filtrarPorPais = (pais) => {
+  const paisBusqueda = pais.toLowerCase();
+
+  const equiposFiltrados = datos.filter((equipo) => {
+    // Asegurarse de que el equipo tenga la propiedad 'pais'
+    if (!equipo.pais) {
+      return false;
+    }
+    // Compara que el país sea exacto
+    return equipo.pais.toLowerCase() === paisBusqueda;
+  });
+
+  return equiposFiltrados;
+};
 
 
 
@@ -142,7 +157,8 @@ module.exports = {
   capEstadio,
   filtrarPorFundacion,
   filtrarPorColor,
-  buscarPorNombre
+  buscarPorNombre,
+  filtrarPorPais
 };
 
 /*

@@ -33,7 +33,8 @@ router.get('/colores/:color1/:color2', datosDesdeControlador.mostrarEquiposPorCo
 //ruta para buscar equipos por nombre (ej: /nombre/real) puede usasrse nombre completo o parcial
 router.get('/nombre/:nombre', datosDesdeControlador.mostrarEquiposPorNombre);
 
-
+//ruta para filtrar equipos por país (ej: /pais/Italia)
+router.get('/pais/:pais', datosDesdeControlador.mostrarEquiposPorPais);
 
 
 

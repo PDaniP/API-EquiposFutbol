@@ -76,7 +76,12 @@ function mostrarEquiposPorNombre(req, res) {
   res.status(200).json(datos);
 }
 
-
+//Función para mostrar equipos por país
+function mostrarEquiposPorPais(req, res) {
+  const pais = req.params.pais;
+  const datos = importModelo.filtrarPorPais(pais);
+  res.status(200).json(datos);
+}
 
 
 //Export de funciones.
@@ -88,7 +93,8 @@ module.exports = {
     mostrarCapacidadEstadio,
     mostrarEquiposPorFundacion,
     mostrarEquiposPorColor,
-    mostrarEquiposPorNombre
+    mostrarEquiposPorNombre,
+    mostrarEquiposPorPais
 }
 
 /*
