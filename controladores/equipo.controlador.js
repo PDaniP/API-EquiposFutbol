@@ -128,6 +128,44 @@ function crearEquipo(req, res) {
   }
 }
 
+/*******************************************************************/
+/*******************************************************************/
+/*******************************************************************/
+
+// Funcion para eliminar un equipo
+function borrarEquipo(req, res) {
+  // 1. Convertir el ID de la URL (string) a un numero
+  const id = parseInt(req.params.id);
+
+  // 2. Validar si el ID es un numero valido
+  if (isNaN(id)) {
+    return res.status(400).json({ error: "ID inválido. Debe ser un número." });
+  }
+
+  // 3. Llamar al modelo para eliminar
+  const equipoEliminado = importModelo.eliminarEquipo(id);
+
+  // 4. Manejar las respuestas
+  if (equipoEliminado === null) {
+    // Si el modelo devolvio null, es porque no lo encontro
+    return res.status(404).json({ error: "Equipo no encontrado." });
+  }
+
+  if (equipoEliminado.error) {
+    // Si el modelo devolvio un error (ej. al escribir el archivo)
+    return res.status(500).json({ error: "Error del servidor al eliminar el equipo." });
+  }
+
+  // 5. Exito: Devolvemos el equipo que fue eliminado
+  res.status(200).json({
+    mensaje: "Equipo eliminado exitosamente",
+    equipo: equipoEliminado
+  });
+}
+
+
+
+
 
 
 
@@ -147,7 +185,8 @@ module.exports = {
     mostrarEquiposPorLiga,
     mostrarEquiposPorPaisConTitulosInt,
     mostrarEquiposConQuery,
-    crearEquipo
+    crearEquipo,
+    borrarEquipo
 }
 
 /*

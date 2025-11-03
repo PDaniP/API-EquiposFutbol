@@ -255,10 +255,35 @@ const agregarEquipo = (nuevoEquipo) => {
 };
 
 
+/*******************************************************************/
+/*******************************************************************/
+/*******************************************************************/
 
 
+//Elimina un equipo por su ID
+const eliminarEquipo = (id) => {
+  // 1. Encontrar el indice del equipo en el array 'datos'
+  const indice = datos.findIndex(equipo => equipo.id === id);
 
+  // 2. Si el ID no existe (findIndex devuelve -1), retornamos null
+  if (indice === -1) {
+    return null; // Indicador de "No Encontrado"
+  }
 
+  // 3. Eliminar el equipo del array
+  const equipoEliminado = datos.splice(indice, 1)[0];
+
+  // 4. Re-escribir el archivo JSON con el array actualizado
+  try {
+    fs.writeFileSync(rutaDatos, JSON.stringify(datos, null, 2), "utf-8");
+    // 5. Devolver el equipo que acabamos de eliminar
+    return equipoEliminado;
+  } catch (error) {
+    console.error("Error al escribir en el archivo JSON:", error);
+    // Devolvemos un objeto de error si falla la escritura
+    return { error: "Error de escritura al eliminar." };
+  }
+};
 
 
 
@@ -289,7 +314,8 @@ module.exports = {
   filtrarPorLiga,
   filtrarPorPaisConTitulosInt,
   filtrarConQuery,
-  agregarEquipo
+  agregarEquipo,
+  eliminarEquipo
 };
 
 /*

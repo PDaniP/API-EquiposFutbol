@@ -59,7 +59,8 @@ Ejemplo de busquedas:
 // Ruta para CREAR un nuevo equipo (usa el metodo POST)
 router.post('/crear', datosDesdeControlador.crearEquipo);
 
-
+// Ruta para ELIMINAR un equipo por ID (usa el metodo DELETE)
+router.delete('/eliminar/:id', datosDesdeControlador.borrarEquipo);
 
 
 
