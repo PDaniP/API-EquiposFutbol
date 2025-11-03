@@ -270,10 +270,6 @@ function actualizarCapacidad(req, res) {
 }
 
 
-
-
-
-
 //Export de funciones.
 module.exports = {
     mostarPorID,

@@ -68,7 +68,7 @@ router.patch('/titulos/nacionales/:id', datosDesdeControlador.actualizarTitulosN
 // Ruta para ACTUALIZAR (PATCH) solo los titulos internacionales (ej: PATCH /titulos/internacionales/1)
 router.patch('/titulos/internacionales/:id', datosDesdeControlador.actualizarTitulosInter);
 
-// Ruta para ACTUALIZAR (PATCH) solo la capacidad del estadio (ej: PATCH /capacidad/1)
+// Ruta para ACTUALIZAR (PATCH) solo la capacidad del estadio (ej: PATCH /capacidad/1) ej: {"capacidad": 65432}
 router.patch('/capacidad/:id', datosDesdeControlador.actualizarCapacidad);
 
 
@@ -78,35 +78,8 @@ router.patch('/capacidad/:id', datosDesdeControlador.actualizarCapacidad);
 module.exports = router
 
 
-/*
-//modelo para nuevos equipos
-const { EquipoControlador } = require("../controladores/controlador");
 
-//router.post("/nuevo", EquipoControlador.crearEquipo);
-// Ruta POST
-router.post("/nuevo", datosDesdeControlador.EquipoControlador.crearEquipo);
 
-function renderNuevoEquipoJSON(equipo) {
-  return {
-    mensaje: "Nuevo equipo agregado correctamente",
-    equipo: {
-      id: equipo.id,
-      nombre: equipo.nombre,
-      pais: equipo.pais,
-      liga: equipo.liga,
-      fundacion: equipo.fundacion,
-      cantidadDeTitulosNacionales: equipo.cantidadDeTitulosNacionales,
-      cantidadDeTitulosInternacionales: equipo.cantidadDeTitulosInternacionales,
-      capacidadEstadio: equipo.capacidadEstadio,
-      coloresCamiseta: equipo.coloresCamiseta
-    }
-  };
-}
-
-module.exports = { 
-    renderNuevoEquipoJSON, 
-    router 
-};*/
 
 
 /*
