@@ -21,21 +21,23 @@ router.get('/internacionales/:internacionales', datosDesdeControlador.mostrarTit
 //ruta para mostrar capacidad del estadio. (ej: /capacidad/45000)
 router.get('/capacidad/:capacidad', datosDesdeControlador.mostrarCapacidadEstadio)
 
-//ruta para filtrar por fundación. Se puede usar "anterior" o "posterior" en :tipo (ej: /fundacion/anterior/1910)
+//ruta para mostrar por fundación. Se puede usar "anterior" o "posterior" en :tipo (ej: /fundacion/anterior/1910)
 router.get('/fundacion/:tipo/:anio', datosDesdeControlador.mostrarEquiposPorFundacion);
 
-//ruta para buscar por 1 color (ej: /colores/rojo)
+//ruta para mostrar por 1 color (ej: /colores/rojo)
 router.get('/colores/:color1', datosDesdeControlador.mostrarEquiposPorColor);
 
-//ruta para buscar por 2 colores (ej: /colores/rojo/blanco)
+//ruta para mostrar por 2 colores (ej: /colores/rojo/blanco)
 router.get('/colores/:color1/:color2', datosDesdeControlador.mostrarEquiposPorColor);
 
-//ruta para buscar equipos por nombre (ej: /nombre/real) puede usasrse nombre completo o parcial
+//ruta para mostrar equipos por nombre (ej: /nombre/real) puede usasrse nombre completo o parcial
 router.get('/nombre/:nombre', datosDesdeControlador.mostrarEquiposPorNombre);
 
-//ruta para filtrar equipos por país (ej: /pais/Italia)
+//ruta para mostrar equipos por país (ej: /pais/Italia)
 router.get('/pais/:pais', datosDesdeControlador.mostrarEquiposPorPais);
 
+//ruta para mostrar equipos por liga (ej: /liga/Premier League)
+router.get('/liga/:liga', datosDesdeControlador.mostrarEquiposPorLiga);
 
 
 //Exportacion de router.

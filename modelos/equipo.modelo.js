@@ -115,7 +115,7 @@ const filtrarPorColor = (color1, color2) => {
   }));
 };
 
-//busca equipos cuyo nombre contenga el texto de búsqueda (no sensible a may/min)
+//busca equipos cuyo nombre tenga el texto de búsqueda (no sensible a may/min)
 const buscarPorNombre = (nombre) => {
   // Convertimos el término de búsqueda a minúsculas
   const nombreBusqueda = nombre.toLowerCase();
@@ -130,7 +130,7 @@ const buscarPorNombre = (nombre) => {
   return equiposFiltrados;
 };
 
-// Filtra equipos por un país específico (coincidencia exacta, no sensible a may/min)
+//filtra equipos por país específico (coincidencia exacta, no sensible a may/min)
 const filtrarPorPais = (pais) => {
   const paisBusqueda = pais.toLowerCase();
 
@@ -146,6 +146,21 @@ const filtrarPorPais = (pais) => {
   return equiposFiltrados;
 };
 
+//filtra equipos por una liga específica (coincidencia exacta, no sensible a may/min)
+const filtrarPorLiga = (liga) => {
+  const ligaBusqueda = liga.toLowerCase();
+
+  const equiposFiltrados = datos.filter((equipo) => {
+    // Asegurarse de que el equipo tenga la propiedad 'liga'
+    if (!equipo.liga) {
+      return false;
+    }
+    // Compara que la liga sea exacta
+    return equipo.liga.toLowerCase().includes(ligaBusqueda);
+  });
+
+  return equiposFiltrados;
+};
 
 
 //Para exportar
@@ -158,7 +173,8 @@ module.exports = {
   filtrarPorFundacion,
   filtrarPorColor,
   buscarPorNombre,
-  filtrarPorPais
+  filtrarPorPais,
+  filtrarPorLiga
 };
 
 /*

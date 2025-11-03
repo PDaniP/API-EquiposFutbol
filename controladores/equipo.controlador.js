@@ -37,7 +37,7 @@ function mostrarCapacidadEstadio(req, res) {
     res.status(200).json(datos)
 }
 
-//Función unificada para filtrar por año de fundación
+//Funcion unificada para filtrar por año de fundación
 function mostrarEquiposPorFundacion(req, res) {
   // Obtenemos ambos parámetros de la URL
   const anio = parseInt(req.params.anio);
@@ -57,7 +57,7 @@ function mostrarEquiposPorFundacion(req, res) {
   res.status(200).json(datos);
 }
 
-//Función para mostrar equipos por color(es)
+//Funcion para mostrar equipos por color(es)
 function mostrarEquiposPorColor(req, res) {
   // Tomamos :color1 (obligatorio) y :color2 (opcional) de la URL
   const { color1, color2 } = req.params;
@@ -67,7 +67,7 @@ function mostrarEquiposPorColor(req, res) {
   res.status(200).json(datos);
 }
 
-//Función para mostrar equipos por nombre
+//Funcion para mostrar equipos por nombre
 function mostrarEquiposPorNombre(req, res) {
   // Obtenemos el parámetro de la ruta (no necesita parseInt, es un string)
   const nombre = req.params.nombre;
@@ -76,13 +76,19 @@ function mostrarEquiposPorNombre(req, res) {
   res.status(200).json(datos);
 }
 
-//Función para mostrar equipos por país
+//Funcion para mostrar equipos por país
 function mostrarEquiposPorPais(req, res) {
   const pais = req.params.pais;
   const datos = importModelo.filtrarPorPais(pais);
   res.status(200).json(datos);
 }
 
+//Funcion para mostrar equipos por liga
+function mostrarEquiposPorLiga(req, res) {
+  const liga = req.params.liga;
+  const datos = importModelo.filtrarPorLiga(liga);
+  res.status(200).json(datos);
+}
 
 //Export de funciones.
 module.exports = {
@@ -94,7 +100,8 @@ module.exports = {
     mostrarEquiposPorFundacion,
     mostrarEquiposPorColor,
     mostrarEquiposPorNombre,
-    mostrarEquiposPorPais
+    mostrarEquiposPorPais,
+    mostrarEquiposPorLiga
 }
 
 /*
