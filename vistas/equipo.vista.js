@@ -56,6 +56,16 @@ Ejemplo de busquedas:
 /buscar?pais=Inglaterra&liga=premier&titulosInternacionales=5
 */
 
+// Ruta para CREAR un nuevo equipo (usa el metodo POST)
+router.post('/crear', datosDesdeControlador.crearEquipo);
+
+
+
+
+
+
+
+
 
 //Exportacion de router.
 module.exports = router

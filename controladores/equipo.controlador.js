@@ -103,6 +103,33 @@ function mostrarEquiposConQuery(req, res) {
   res.status(200).json(datos);
 }
 
+/*******************************************************************/
+/*******************************************************************/
+/*******************************************************************/
+
+
+// Función para crear un nuevo equipo
+function crearEquipo(req, res) {
+  // Los datos del nuevo equipo vienen en req.body
+  const nuevoEquipoDatos = req.body;
+
+  //me aseguro de que el body no este vacio
+  if (!nuevoEquipoDatos || Object.keys(nuevoEquipoDatos).length === 0) {
+    return res.status(400).json({ error: "No se proporcionaron datos para crear el equipo." });
+  }
+
+  const equipoCreado = importModelo.agregarEquipo(nuevoEquipoDatos);
+
+  if (equipoCreado) {
+    // Usamos el status 201 (Created)
+    res.status(201).json(equipoCreado);
+  } else {
+    res.status(500).json({ error: "Error al guardar el equipo." });
+  }
+}
+
+
+
 
 
 
@@ -119,7 +146,8 @@ module.exports = {
     mostrarEquiposPorPais,
     mostrarEquiposPorLiga,
     mostrarEquiposPorPaisConTitulosInt,
-    mostrarEquiposConQuery
+    mostrarEquiposConQuery,
+    crearEquipo
 }
 
 /*

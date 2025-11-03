@@ -225,6 +225,52 @@ const filtrarConQuery = (filtros) => {
 };
 
 
+/*******************************************************************/
+/*******************************************************************/
+/*******************************************************************/
+
+// Agrega un nuevo equipo al JSON
+const agregarEquipo = (nuevoEquipo) => {
+  
+  //tomamos el ultimo equipo del array 'datos' 
+  const ultimoEquipo = datos[datos.length - 1];
+  const nuevoId = ultimoEquipo.id + 1;
+
+  
+  //uso (...) para combinar el id con el resto de datos
+  const equipoConId = { id: nuevoId, ...nuevoEquipo };
+
+  //agregar el nuevo equipo al array 
+  datos.push(equipoConId);
+
+  //re-escribir el archivo JSON con el array nuevo
+  try {
+    fs.writeFileSync(rutaDatos, JSON.stringify(datos, null, 2), "utf-8");
+    //devolver el equipo que acabamos de crear
+    return equipoConId;
+  } catch (error) {
+    console.error("Error al escribir en el archivo JSON:", error);
+    return null; //devolver null en caso de error
+  }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -242,7 +288,8 @@ module.exports = {
   filtrarPorPais,
   filtrarPorLiga,
   filtrarPorPaisConTitulosInt,
-  filtrarConQuery
+  filtrarConQuery,
+  agregarEquipo
 };
 
 /*

@@ -14,6 +14,10 @@ app.listen(port, () => {
 });
 
 
+
+
+
+
 //Modelo para la parte del Post.
 //const { router } = require('./vistas/vista.js');
 //app.use('/equipos', router);
