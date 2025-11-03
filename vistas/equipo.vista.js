@@ -82,6 +82,28 @@ module.exports = router
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 //ruta DELETE
 router.delete('/eliminar/:nombre', datosDesdeControlador.eliminarEquipo);
