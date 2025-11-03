@@ -21,6 +21,9 @@ router.get('/internacionales/:internacionales', datosDesdeControlador.mostrarTit
 //ruta para mostrar capacidad del estadio.
 router.get('/capacidad/:capacidad', datosDesdeControlador.mostrarCapacidadEstadio)
 
+// Ruta para filtrar por fundación. Se puede usar "anterior" o "posterior" en :tipo
+router.get('/fundacion/:tipo/:anio', datosDesdeControlador.mostrarEquiposPorFundacion);
+
 //Exportacion de router.
 module.exports = router
 

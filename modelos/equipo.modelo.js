@@ -60,7 +60,24 @@ const capEstadio = (capacidad) => {
   return capEst;
 };
 
+// Muestra equipos según el año de fundación (anterior o posterior)
+const filtrarPorFundacion = (anio, tipo) => {
+  // Usamos filter() para filtrar el array principal
+  const equiposFiltrados = datos.filter((equipo) => {
+    if (tipo === 'anterior') {
+      return equipo.fundacion < anio; // Compara si es menor
+    } else if (tipo === 'posterior') {
+      return equipo.fundacion > anio; // Compara si es mayor
+    }
+    return false; // No devuelve nada si el 'tipo' no coincide
+  });
 
+  // Usamos map() para formatear la salida solo con los datos que queremos
+  return equiposFiltrados.map((equipo) => ({
+    nombre: equipo.nombre,
+    fundacion: equipo.fundacion,
+  }));
+};
 
 //Para exportar
 module.exports = {
@@ -69,6 +86,7 @@ module.exports = {
   titulosNacionales,
   titulosInternacionales,
   capEstadio,
+  filtrarPorFundacion
 
 };
 

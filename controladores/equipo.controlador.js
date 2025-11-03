@@ -37,7 +37,25 @@ function mostrarCapacidadEstadio(req, res) {
     res.status(200).json(datos)
 }
 
+// Función unificada para filtrar por año de fundación
+function mostrarEquiposPorFundacion(req, res) {
+  // Obtenemos ambos parámetros de la URL
+  const anio = parseInt(req.params.anio);
+  const tipo = req.params.tipo; // "anterior" o "posterior"
 
+  // Validamos que el tipo sea uno de los esperados
+  if (tipo !== 'anterior' && tipo !== 'posterior') {
+    return res.status(400).json({ error: "Tipo de filtro inválido. Use 'anterior' o 'posterior'." });
+  }
+
+  // Validamos que el año sea un número
+  if (isNaN(anio)) {
+    return res.status(400).json({ error: "El año debe ser un número válido." });
+  }
+
+  const datos = importModelo.filtrarPorFundacion(anio, tipo);
+  res.status(200).json(datos);
+}
 
 
 
@@ -49,7 +67,8 @@ module.exports = {
     mostrarDatos,
     mostrarTitulos,
     mostrarTitulosInter,
-    mostrarCapacidadEstadio,   
+    mostrarCapacidadEstadio,
+    mostrarEquiposPorFundacion   
 }
 
 /*
