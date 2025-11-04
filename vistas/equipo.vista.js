@@ -4,6 +4,13 @@
 const datosDesdeControlador = require("../controladores/equipo.controlador");
 const express = require('express');
 
+//importa middleware de validacion
+const { 
+  validarNuevoEquipo, 
+  validarTitulos, 
+  validarCapacidad 
+} = require('../middlewares/equipo.validateData.js');
+
 //importa las funcionalidades del objeto router en express.
 const router = express.Router();
 
@@ -43,9 +50,6 @@ router.get('/pais/:pais', datosDesdeControlador.mostrarEquiposPorPais);
 //ruta para mostrar equipos por liga (ej: /liga/Premier League)
 router.get('/liga/:liga', datosDesdeControlador.mostrarEquiposPorLiga);
 
-//ruta para filtrar por pais y que tengan titulos internacionales  (ej: /pais/España/internacionales)
-router.get('/pais/:pais/internacionales', datosDesdeControlador.mostrarEquiposPorPaisConTitulosInt);
-
 //ruta para filtrar por query (ej: /buscar?pais=Italia&liga=Serie A)
 router.get('/buscar', datosDesdeControlador.mostrarEquiposConQuery);
 /*
@@ -57,20 +61,26 @@ Ejemplo de busquedas:
 /buscar?pais=Inglaterra&liga=premier&titulosInternacionales=5
 */
 
+
+
 //ruta para CREAR un nuevo equipo (usa el metodo POST)
-router.post('/crear', datosDesdeControlador.crearEquipo);
+router.post('/crear', validarNuevoEquipo, datosDesdeControlador.crearEquipo);
+
+
 
 //ruta para ELIMINAR un equipo por ID (usa el metodo DELETE)
 router.delete('/eliminar/:id', datosDesdeControlador.borrarEquipo);
 
+
+
 //ruta para ACTUALIZAR (PATCH) solo los titulos nacionales (ej: PATCH /titulos/nacionales/1  el 1 corresponde al id) se ingresa un objeto {"titulos": 76}
-router.patch('/titulos/nacionales/:id', datosDesdeControlador.actualizarTitulosNac);
+router.patch('/titulos/nacionales/:id', validarTitulos, datosDesdeControlador.actualizarTitulosNac);
 
 // Ruta para ACTUALIZAR (PATCH) solo los titulos internacionales (ej: PATCH /titulos/internacionales/1)
-router.patch('/titulos/internacionales/:id', datosDesdeControlador.actualizarTitulosInter);
+router.patch('/titulos/internacionales/:id', validarTitulos, datosDesdeControlador.actualizarTitulosInter);
 
 // Ruta para ACTUALIZAR (PATCH) solo la capacidad del estadio (ej: PATCH /capacidad/1) ej: {"capacidad": 65432}
-router.patch('/capacidad/:id', datosDesdeControlador.actualizarCapacidad);
+router.patch('/capacidad/:id', validarCapacidad, datosDesdeControlador.actualizarCapacidad);
 
 
 

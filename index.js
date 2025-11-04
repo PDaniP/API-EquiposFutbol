@@ -8,7 +8,6 @@ const importMorgan = require('./middlewares/equipo.logger.js')
 const importValidateData = require('./middlewares/equipo.validateData.js')
 
 app.use(express.json());
-
 app.use(importMorgan);
 //app.use(importValidateData);
 
@@ -16,9 +15,6 @@ app.use(importMorgan);
 //Ruta principal
 app.use('/equipos', importRoutes)
 
-app.post('/equipos/crear', importValidateData, (req, res) => {
-  res.send('Equipo creado correctamente');
-});
 
 //inicia el servidor
 app.listen(port, () => {

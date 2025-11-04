@@ -1,6 +1,5 @@
 //Pido datos al modelo y los envio a vista
 const importModelo = require("../modelos/equipo.modelo")
-const importVista = require("../vistas/equipo.vista")
 
 
 //Funcion para mostrar todos los datos.
@@ -13,26 +12,38 @@ function mostrarDatos(req, res) {
 function mostarPorID(req, res) {
     const datosID = parseInt(req.params.id)
     const datos = importModelo.mostrarEquipoPorID(datosID)
+    if (!datos) {
+        return res.status(404).json({ error: "Equipo no encontrado." });
+    }
     res.status(200).json(datos)
 }
 
 //Funcion para mostrar titulos nacionales.
 function mostrarTitulos(req, res) {
-    const titulo = req.params.nacionales
+    const titulo = parseInt(req.params.nacionales)
+    if (isNaN(titulo)) {
+        return res.status(400).json({ error: "El parámetro 'nacionales' debe ser un número." });
+    }
     const datos = importModelo.titulosNacionales(titulo);
     res.status(200).json(datos)
 }
 
 //Funcion para mostrar titulos internacionales
 function mostrarTitulosInter(req, res) {
-    const titulo = req.params.internacionales
+    const titulo = parseInt(req.params.internacionales)
+    if (isNaN(titulo)){
+      return res.status(400).json({ error: "El parámetro 'internacionales' debe ser un número." });
+    }
     const datos = importModelo.titulosInternacionales(titulo);
     res.status(200).json(datos)
 }
 
 //Funcion para mostrar capacidad del estadio.
 function mostrarCapacidadEstadio(req, res) {
-    const capacidad = req.params.capacidad
+    const capacidad = parseInt(req.params.capacidad)
+    if (isNaN(capacidad)){
+      return res.status(400).json({ error: "El parámetro 'capacidad' debe ser un número." });
+    }
     const datos = importModelo.capEstadio(capacidad);
     res.status(200).json(datos)
 }
