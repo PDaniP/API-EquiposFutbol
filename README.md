@@ -104,9 +104,9 @@ Ejemplo de Body (JSON)
 Metodos PATCH (Actualizacion parcial)
 
 Método   Ruta                             Descripcion                                                          Ejemplo de Body (JSON)
-PATCH    /titulos/nacionales/:id          Actualiza solo los titulos nacionales del equipo con ese ID.         {""titulos"": 76}
-PATCH    /titulos/internacionales/:id     Actualiza solo los titulos internacionales del equipo con ese ID.    {""titulos"": 26}
-PATCH    /capacidad/:id                   Actualiza solo la capacidad del estadio del equipo con ese ID.       {""capacidad"": 55500}
+PATCH    /titulos/nacionales/:id          Actualiza solo los titulos nacionales del equipo con ese ID.         {"titulos": 76}
+PATCH    /titulos/internacionales/:id     Actualiza solo los titulos internacionales del equipo con ese ID.    {"titulos": 26}
+PATCH    /capacidad/:id                   Actualiza solo la capacidad del estadio del equipo con ese ID.       {"capacidad": 55500}
 
 
 Metodos DELETE (Borrado)
@@ -323,3 +323,15 @@ Respuesta(200 Ok):
 
 
 7- Conclusion
+
+El proyecto trajo varios desafios. Costo estructurar el proyecto en los diversos archivos, e implementar el uso de middlewares para la validacion de datos.
+Tambien la poca experiencia en el manejo de este tipo de estructuras llevo a la necesidad de implementar y experimentar con el codigo hasta conseguir que los procesos funcionasen como era debido.
+
+Aprendizajes Obtenidos:
+
+El trabajo en la API ayudo a aprender sobre el manejo de la estructura MVC.
+Aprendi a configurar un servidor Express desde cero.
+Se obtuvo experincia en la implementacion de un Router para gestionar los endpoints.
+Conoci la existencia de los middlewares y las tecnologias aplicadas.
+Se mejoro el uso de params y query.
+Y el manejo de persistencia de datos en un archivo JSON usando los modulos fs y path de Node.js
