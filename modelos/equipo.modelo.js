@@ -1,20 +1,17 @@
 //El modelo busca informacion en la base de datos y las envia al controlador.
 const fs = require('fs');
 const path = require('path');
-
-// Ruta del archivo JSON
 const rutaDatos = path.join(__dirname, "../data/equiposFutbol.json");
 const leerDatos = fs.readFileSync(rutaDatos, "utf-8")
+
 //variable para importar los datos del json
 const datos = JSON.parse(leerDatos)
-//console.log(datos[0].nombre)
 
 //Funcion para mostrar todos los datos
 const mostrarTodosLosDatos = () => {
   return datos;
 };
 
-//console.log(datos[0].cantiadDeTitulosNacionales)
 
 //mostrar equipos por id
 const mostrarEquipoPorID = (id) => {
@@ -62,17 +59,15 @@ const capEstadio = (capacidad) => {
 
 //muestra equipos segun el año de fundacion (anterior o posterior)
 const filtrarPorFundacion = (anio, tipo) => {
-  // Usamos filter() para filtrar el array principal
   const equiposFiltrados = datos.filter((equipo) => {
     if (tipo === 'anterior') {
-      return equipo.fundacion < anio; // Compara si es menor
+      return equipo.fundacion < anio; 
     } else if (tipo === 'posterior') {
-      return equipo.fundacion > anio; // Compara si es mayor
+      return equipo.fundacion > anio; 
     }
-    return false; // No devuelve nada si el 'tipo' no coincide
+    return false; 
   });
 
-  // Usamos map() para formatear la salida solo con los datos que queremos
   return equiposFiltrados.map((equipo) => ({
     nombre: equipo.nombre,
     fundacion: equipo.fundacion,
@@ -81,34 +76,27 @@ const filtrarPorFundacion = (anio, tipo) => {
 
 //filtra equipos por uno o dos colores de camiseta
 const filtrarPorColor = (color1, color2) => {
-  // Normalizar colores a minúscula (si existen)
   const c1 = color1 ? color1.toLowerCase() : null;
   const c2 = color2 ? color2.toLowerCase() : null;
 
   const equiposFiltrados = datos.filter((equipo) => {
-    // Asegurarse de que el equipo tenga la estructura de colores
     if (!equipo.coloresCamiseta) {
       return false;
     }
     
     const { color1: teamC1, color2: teamC2 } = equipo.coloresCamiseta;
 
-    // Escenario 1: Se provee solo 1 color (c1 existe, c2 NO existe)
     if (c1 && !c2) {
-      // Comprueba si el color 1 está en CUALQUIERA de las dos posiciones
       return teamC1 === c1 || teamC2 === c1;
     } 
     
-    // Escenario 2: Se proveen 2 colores (ambos existen)
     else if (c1 && c2) {
-      // Comprueba que AMBOS colores estén (sin importar el orden)
       return (teamC1 === c1 && teamC2 === c2) || (teamC1 === c2 && teamC2 === c1);
     }
     
-    return false; // No se proveyó color1 o caso no manejado
+    return false; 
   });
 
-  // Devolvemos el nombre y los colores del equipo
   return equiposFiltrados.map((equipo) => ({
     nombre: equipo.nombre,
     colores: equipo.coloresCamiseta,
@@ -117,16 +105,12 @@ const filtrarPorColor = (color1, color2) => {
 
 //busca equipos cuyo nombre tenga el texto de busqueda (no sensible a may/min)
 const buscarPorNombre = (nombre) => {
-  // Convertimos el término de búsqueda a minúsculas
   const nombreBusqueda = nombre.toLowerCase();
 
-  // Filtramos el array de datos
   const equiposFiltrados = datos.filter((equipo) => {
-    // Convertimos el nombre del equipo a minúsculas y verificamos si incluye el término
     return equipo.nombre.toLowerCase().includes(nombreBusqueda);
   });
   
-  // Devolvemos los equipos completos que coincidieron
   return equiposFiltrados;
 };
 
@@ -135,11 +119,10 @@ const filtrarPorPais = (pais) => {
   const paisBusqueda = pais.toLowerCase();
 
   const equiposFiltrados = datos.filter((equipo) => {
-    // Asegurarse de que el equipo tenga la propiedad 'pais'
+    //ver de que el equipo tenga la propiedad 'pais'
     if (!equipo.pais) {
       return false;
     }
-    // Compara que el país sea exacto
     return equipo.pais.toLowerCase() === paisBusqueda;
   });
 
@@ -151,11 +134,11 @@ const filtrarPorLiga = (liga) => {
   const ligaBusqueda = liga.toLowerCase();
 
   const equiposFiltrados = datos.filter((equipo) => {
-    // Asegurarse de que el equipo tenga la propiedad 'liga'
+    //ver de que el equipo tenga la propiedad 'liga'
     if (!equipo.liga) {
       return false;
     }
-    // Compara que la liga sea exacta
+    //compara que la liga sea exacta
     return equipo.liga.toLowerCase().includes(ligaBusqueda);
   });
 
@@ -167,19 +150,18 @@ const filtrarPorPaisConTitulosInt = (pais) => {
   const paisBusqueda = pais.toLowerCase();
 
   const equiposFiltrados = datos.filter((equipo) => {
-    // Asegurarse de que el equipo tenga las propiedades
+    //asegurarse de que el equipo tenga las propiedades
     if (!equipo.pais || equipo.cantidadDeTitulosInternacionales === undefined) {
       return false;
     }
     
-    // Ambas condiciones deben cumplirse
+    //ambas condiciones deben cumplirse
     const coincidePais = equipo.pais.toLowerCase() === paisBusqueda;
     const tieneTitulos = equipo.cantidadDeTitulosInternacionales > 0;
 
     return coincidePais && tieneTitulos;
   });
 
-  // Mapeamos para devolver la info relevante
   return equiposFiltrados.map((equipo) => ({
     nombre: equipo.nombre,
     pais: equipo.pais,
@@ -240,17 +222,14 @@ const agregarEquipo = (nuevoEquipo) => {
   //uso (...) para combinar el id con el resto de datos
   const equipoConId = { id: nuevoId, ...nuevoEquipo };
 
-  //agregar el nuevo equipo al array 
   datos.push(equipoConId);
 
-  //re-escribir el archivo JSON con el array nuevo
   try {
     fs.writeFileSync(rutaDatos, JSON.stringify(datos, null, 2), "utf-8");
-    //devolver el equipo que acabamos de crear
     return equipoConId;
   } catch (error) {
     console.error("Error al escribir en el archivo JSON:", error);
-    return null; //devolver null en caso de error
+    return null; 
   }
 };
 
@@ -262,25 +241,19 @@ const agregarEquipo = (nuevoEquipo) => {
 
 //Elimina un equipo por su ID
 const eliminarEquipo = (id) => {
-  // 1. Encontrar el indice del equipo en el array 'datos'
   const indice = datos.findIndex(equipo => equipo.id === id);
 
-  // 2. Si el ID no existe (findIndex devuelve -1), retornamos null
   if (indice === -1) {
-    return null; // Indicador de "No Encontrado"
+    return null; 
   }
 
-  // 3. Eliminar el equipo del array
   const equipoEliminado = datos.splice(indice, 1)[0];
 
-  // 4. Re-escribir el archivo JSON con el array actualizado
   try {
     fs.writeFileSync(rutaDatos, JSON.stringify(datos, null, 2), "utf-8");
-    // 5. Devolver el equipo que acabamos de eliminar
     return equipoEliminado;
   } catch (error) {
     console.error("Error al escribir en el archivo JSON:", error);
-    // Devolvemos un objeto de error si falla la escritura
     return { error: "Error de escritura al eliminar." };
   }
 };
@@ -292,22 +265,16 @@ const eliminarEquipo = (id) => {
 
 // Actualiza (PATCH) solo los titulos nacionales de un equipo por ID
 const actualizarTitulosNacionales = (id, nuevaCantidad) => {
-  // 1. Encontrar el equipo específico en el array 'datos'
-  //    Usamos .find() para obtener la referencia directa al objeto
   const equipoAActualizar = datos.find(equipo => equipo.id === id);
 
-  // 2. Si no se encuentra el equipo, devolver null
   if (!equipoAActualizar) {
-    return null; // "No Encontrado"
+    return null; 
   }
 
-  // 3. Actualizar solo el campo necesario
   equipoAActualizar.cantidadDeTitulosNacionales = nuevaCantidad;
 
-  // 4. Re-escribir el archivo JSON con los datos actualizados
   try {
     fs.writeFileSync(rutaDatos, JSON.stringify(datos, null, 2), "utf-8");
-    // 5. Devolver el equipo completo ya actualizado
     return equipoAActualizar;
   } catch (error) {
     console.error("Error al escribir en el archivo JSON:", error);
@@ -317,21 +284,18 @@ const actualizarTitulosNacionales = (id, nuevaCantidad) => {
 
 // Actualiza (PATCH) solo los titulos internacionales de un equipo por ID
 const actualizarTitulosInternacionales = (id, nuevaCantidad) => {
-  // 1. Encontrar el equipo especifico en el array 'datos'
+  
   const equipoAActualizar = datos.find(equipo => equipo.id === id);
 
-  // 2. Si no se encuentra el equipo, devolver null
   if (!equipoAActualizar) {
-    return null; // "No Encontrado"
+    return null; 
   }
 
-  // 3. Actualizar solo el campo necesario
   equipoAActualizar.cantidadDeTitulosInternacionales = nuevaCantidad;
 
-  // 4. Re-escribir el archivo JSON con los datos actualizados
   try {
     fs.writeFileSync(rutaDatos, JSON.stringify(datos, null, 2), "utf-8");
-    // 5. Devolver el equipo completo ya actualizado
+    
     return equipoAActualizar;
   } catch (error) {
     console.error("Error al escribir en el archivo JSON:", error);
@@ -341,21 +305,17 @@ const actualizarTitulosInternacionales = (id, nuevaCantidad) => {
 
 // Actualiza (PATCH) solo la capacidad del estadio de un equipo por ID
 const actualizarCapacidadEstadio = (id, nuevaCapacidad) => {
-  // 1. Encontrar el equipo
+  
   const equipoAActualizar = datos.find(equipo => equipo.id === id);
 
-  // 2. Si no se encuentra, devolver null
   if (!equipoAActualizar) {
-    return null; // "No Encontrado"
+    return null;
   }
 
-  // 3. Actualizar el campo
   equipoAActualizar.capacidadEstadio = nuevaCapacidad;
 
-  // 4. Re-escribir el archivo JSON
   try {
     fs.writeFileSync(rutaDatos, JSON.stringify(datos, null, 2), "utf-8");
-    // 5. Devolver el equipo actualizado
     return equipoAActualizar;
   } catch (error) {
     console.error("Error al escribir en el archivo JSON:", error);
