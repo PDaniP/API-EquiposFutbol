@@ -12,7 +12,6 @@ const mostrarTodosLosDatos = () => {
   return datos;
 };
 
-
 //mostrar equipos por id
 const mostrarEquipoPorID = (id) => {
   return datos.find((equipo) => equipo.id === id);
