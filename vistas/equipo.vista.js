@@ -52,14 +52,6 @@ router.get('/liga/:liga', datosDesdeControlador.mostrarEquiposPorLiga);
 
 //ruta para filtrar por query (ej: /buscar?pais=Italia&liga=Serie A)
 router.get('/buscar', datosDesdeControlador.mostrarEquiposConQuery);
-/*
-Ejemplo de busquedas:
-/buscar?pais=Argentina
-/buscar?liga=premier
-/buscar?titulosInternacionales=10
-/buscar?pais=España&titulosNacionales=30
-/buscar?pais=Inglaterra&liga=premier&titulosInternacionales=5
-*/
 
 
 
