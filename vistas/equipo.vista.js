@@ -3,6 +3,7 @@
 
 const datosDesdeControlador = require("../controladores/equipo.controlador");
 const express = require('express');
+
 //importa las funcionalidades del objeto router en express.
 const router = express.Router();
 
@@ -77,49 +78,3 @@ router.patch('/capacidad/:id', datosDesdeControlador.actualizarCapacidad);
 //Exportacion de router.
 module.exports = router
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-//ruta DELETE
-router.delete('/eliminar/:nombre', datosDesdeControlador.eliminarEquipo);
-
-*/
-
-
-/*
-//Ruta POST para agregar un nuevo equipo
-router.post('/agregar', datosDesdeControlador.agregarEquipo);
-*/
-
-
-/*
-//Rutas PATCH (actualizar datos específicos)
-router.PATCH('/actualizar/nacionales/:nombre', datosDesdeControlador.actualizarTitulosNacionales);
-router.PATCH('/actualizar/internacionales/:nombre', datosDesdeControlador.actualizarTitulosInternacionales);
-router.PATCH('/actualizar/capacidad/:nombre', datosDesdeControlador.actualizarCapacidad);
-*/
