@@ -15,7 +15,12 @@ app.use(importMorgan);
 //Ruta principal
 app.use('/equipos', importRoutes)
 
-
+//Error al no encontrar una ruta
+app.use('/',(req,res)=>{
+  res.status(404).json({
+    mensaje:'ruta no encontrada'
+  })
+})
 //inicia el servidor
 app.listen(port, () => {
     console.log(`Servidor escuchando en el puerto ${port}`);
