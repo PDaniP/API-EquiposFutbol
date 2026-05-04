@@ -5,18 +5,22 @@ const port = 3000;
 
 app.use(cors());
 
-const importRoutes = require('./vistas/equipo.vista.js');
+app.use(express.json());
+
 
 const importMorgan = require('./middlewares/equipo.logger.js')
+app.use(importMorgan);
+
+const importRoutes = require('./vistas/equipo.vista.js');
+//Ruta principal
+app.use('/equipos', importRoutes)
+
 const importValidateData = require('./middlewares/equipo.validateData.js')
 
-app.use(express.json());
-app.use(importMorgan);
 //app.use(importValidateData);
 
 
-//Ruta principal
-app.use('/equipos', importRoutes)
+
 
 //Error al no encontrar una ruta
 app.use('/',(req,res)=>{
